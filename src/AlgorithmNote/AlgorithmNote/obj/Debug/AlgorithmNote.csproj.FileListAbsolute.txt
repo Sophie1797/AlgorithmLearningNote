@@ -1,0 +1,2 @@
+D:\GitRepository\AlgorithmNote\repository\AlgorithmNote\AlgorithmNote\bin\Debug\AlgorithmNote.exe.config
+D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\bin\Debug\AlgorithmNote.exe.config
