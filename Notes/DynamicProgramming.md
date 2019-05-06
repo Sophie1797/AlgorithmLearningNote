@@ -2,7 +2,7 @@
 ## Problem Summary
 1. **最大连续子序列和**
 	$dp[i]$表示以$A[i]$作为末尾的连续序列的最大和
-    $$ dp[i] = max\{A[i], dp[i-1]+A[i]\} $$
+    {% raw %}$$ dp[i] = max\{A[i], dp[i-1]+A[i]\} $${% endraw %}
     边界
     $$ dp[0]=A[0] $$
 2. **最长不下降子序列（LIS）**
