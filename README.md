@@ -1,17 +1,1 @@
 # Algorithm Learning Notes
-
-* [Stack](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/Notes/Stack.md)
-* [Queue](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/Notes/Queue.md)
-* [Linked List](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/Notes/LinkedList.md)
-* [Tree](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/Notes/Tree.md)
-* [Heap](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/Notes/Heap.md)
-* [Graph](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/Notes/Graph.md)
-* [String](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/Notes/String.md)
-* [Search](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/Notes/Search.md)
-* [Sort](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/Notes/Sort.md)
-* [Backtracking](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/Notes/Backtracking.md)
-* [Divide And Conquer](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/Notes/DivideAndConquer.md)
-* [Two Pointers](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/Notes/TwoPointers.md)
-* [Dynamic Programming](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/Notes/DynamicProgramming.md)
-* [Greedy](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/Notes/Greedy.md)
-* [Math](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/Notes/Math.md)
