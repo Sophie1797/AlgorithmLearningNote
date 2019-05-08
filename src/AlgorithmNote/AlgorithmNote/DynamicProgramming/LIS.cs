@@ -9,7 +9,7 @@ namespace AlgorithmNote.DynamicProgramming
     public class LIS
     {
         /// <summary>
-        /// 343. Integer Break https://leetcode.com/problems/integer-break/submissions/
+        /// 343. Integer Break, https://leetcode.com/problems/integer-break/submissions/
         /// 类似LIS，都是对于小于i的每一个j判断
         /// </summary>
         public int IntegerBreak(int n)
@@ -31,7 +31,7 @@ namespace AlgorithmNote.DynamicProgramming
         }
 
         /// <summary>
-        /// 279. Perfect Squares  https://leetcode.com/problems/perfect-squares/
+        /// 279. Perfect Squares,  https://leetcode.com/problems/perfect-squares/,  google
         /// 类似LIS，都是对于小于i的每一个j判断
         /// </summary>
         public int NumSquares(int n)
@@ -53,6 +53,34 @@ namespace AlgorithmNote.DynamicProgramming
                 dp[i] = min;
             }
             return dp[n];
+        }
+
+        /// <summary>
+        /// 198. House Robber, https://leetcode.com/problems/house-robber/
+        /// </summary>
+        public int Rob(int[] nums)
+        {
+            if (nums == null || nums.Length == 0)
+            {
+                return 0;
+            }
+            var temp = new List<int>();
+            for (var i = 0; i < nums.Length; i++)
+            {
+                if (i == 0)
+                {
+                    temp.Add(nums[0]);
+                }
+                else if (i == 1)
+                {
+                    temp.Add(Math.Max(nums[0], nums[1]));
+                }
+                else
+                {
+                    temp.Add(Math.Max(temp[i - 2] + nums[i], temp[i - 1]));
+                }
+            }
+            return temp.Last();
         }
     }
 }

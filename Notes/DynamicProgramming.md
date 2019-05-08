@@ -7,6 +7,7 @@
     $$ dp[0] = 1， dp[1] = 1 $$
     leetcode中类似题目：
     * [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+    * [91. Decode Ways](https://leetcode.com/problems/decode-ways/submissions/)
 
 * **最大连续子序列和**
 	$dp[i]$表示以$A[i]$作为末尾的连续序列的最大和
@@ -21,6 +22,7 @@
     leetcode中类似题目：
     * [343. Integer Break](https://leetcode.com/problems/integer-break/submissions/)
     * [279. Perfect Squares](https://leetcode.com/problems/perfect-squares/)
+    * [198. House Robber](https://leetcode.com/problems/house-robber/)
 * **最长公共子序列（LCS）**
 	$dp[i][j]$表示字符串$A$的$i$号位和字符串$B$的$j$号位之前的LCS长度
     $$ dp[i][j]=
@@ -49,6 +51,8 @@
     leetcode中类似题目：
     * [120. Triangle](https://leetcode.com/problems/triangle/)
     * [64. Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)
+    * [62. Unique Paths](https://leetcode.com/problems/unique-paths/)
+    * [63. Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)
 * **DAG最长路**
 	$dp[i]$表示从$i$号顶点出发所能获得的最长路经长度
 * **01背包**
