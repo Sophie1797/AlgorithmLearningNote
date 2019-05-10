@@ -60,8 +60,12 @@
     $$ dp[i][v] = max\{dp[i-1][v],dp[i-1][v-w[i]]+c[i]\} $$
     边界
     $$ dp[0][v]=0\ (0{\leq}v{\leq}V)$$
+    leetcode中类似题目：
+    * [416. Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)
 * **完全背包**
 	$dp[i][j]$表示前$i$件物品恰好装入容量为$v$的背包中所能获得的最大价值
     $$ dp[i][v] = max\{dp[i-1][v],dp[i][v-w[i]]+c[i]\} $$
     边界
     $$ dp[0][v]=0\ (0{\leq}v{\leq}V)$$
+    leetcode中类似题目：
+    * [322. Coin Change](https://leetcode.com/problems/coin-change/)
