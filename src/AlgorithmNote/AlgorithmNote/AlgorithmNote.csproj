@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Array\ArrayList.cs" />
     <Compile Include="DynamicProgramming\ClimbingStairs.cs" />
     <Compile Include="DynamicProgramming\DAG.cs" />
     <Compile Include="DynamicProgramming\LCS.cs" />
@@ -50,13 +51,22 @@
     <Compile Include="DynamicProgramming\LIS.cs" />
     <Compile Include="DynamicProgramming\LPS.cs" />
     <Compile Include="DynamicProgramming\NumberTower.cs" />
+    <Compile Include="Graph\Graph.cs" />
+    <Compile Include="Graph\GraphSearch.cs" />
+    <Compile Include="LinkedList\LinkedList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queue\ArrayQueue.cs" />
+    <Compile Include="Stack\ArrayStack.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Sort\" />
+    <Folder Include="String\" />
+    <Folder Include="Tree\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
