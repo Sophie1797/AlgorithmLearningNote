@@ -20,9 +20,11 @@
     边界
     $$ dp[i]=1\ (1{\leq}i{\leq}n)$$
     leetcode中类似题目：
+    * [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
     * [343. Integer Break](https://leetcode.com/problems/integer-break/submissions/)
     * [279. Perfect Squares](https://leetcode.com/problems/perfect-squares/)
     * [198. House Robber](https://leetcode.com/problems/house-robber/)
+    * [376. Wiggle Subsequence](https://leetcode.com/problems/wiggle-subsequence/)
 * **最长公共子序列（LCS）**
 	$dp[i][j]$表示字符串$A$的$i$号位和字符串$B$的$j$号位之前的LCS长度
     $$ dp[i][j]=
@@ -33,7 +35,9 @@
     $$
     边界
     $$dp[i][0]=dp[0][j]=0\ (0{\leq}i{\leq}n,0{\leq}j{\leq}m)$$
-* **最长回文子串**
+    leetcode中类似题目：
+    * [72. Edit Distance](https://leetcode.com/problems/edit-distance/)
+* **最长回文子串（LPS）**
 	$dp[i][j]$表示$S[i]$到$S[j]$所表示的子串是否是回文子串
     $$ dp[i][j]=
     \begin{cases}
@@ -43,6 +47,7 @@
     $$
     边界
     $$dp[i][i]=0,\ dp[i][i+1]=(S[i]==S[i+1]?1:0)$$
+    * [516. Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)
 * **数塔DP**
 	$dp[i][j]$表示从第$i$行第$j$个数字出发的到达最底层的所有路径上所能得到的最大和，$f$是存放数字的数组
     $$ dp[i][j] = max(dp[i+1][j], dp[i+1][j+1])+f[i][j] $$
@@ -55,6 +60,8 @@
     * [63. Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)
 * **DAG最长路**
 	$dp[i]$表示从$i$号顶点出发所能获得的最长路经长度
+    leetcode中类似题目：
+    * [139. Word Break](https://leetcode.com/problems/word-break/)
 * **01背包**
 	$dp[i][j]$表示前$i$件物品恰好装入容量为$v$的背包中所能获得的最大价值，共$n$件物品，每件物品的重量$w[i]$，价值$c[i]$，背包容量$V$
     $$ dp[i][v] = max\{dp[i-1][v],dp[i-1][v-w[i]]+c[i]\} $$

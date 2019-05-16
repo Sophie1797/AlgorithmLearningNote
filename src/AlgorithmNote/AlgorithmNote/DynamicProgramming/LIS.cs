@@ -9,6 +9,66 @@ namespace AlgorithmNote.DynamicProgramming
     public class LIS
     {
         /// <summary>
+        /// LIS原问题，300. Longest Increasing Subsequence，https://leetcode.com/problems/longest-increasing-subsequence/
+        /// O(n^2)
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        public int LengthOfLIS(int[] nums)
+        {
+            if (nums == null || nums.Length == 0)
+            {
+                return 0;
+            }
+            var dp = new List<int>();
+            foreach (var n in nums)
+            {
+                dp.Add(1);
+            }
+            var max = 1;
+            for (var i = 0; i < nums.Length; i++)
+            {
+                for (var j = 0; j < i; j++)
+                {
+                    if (nums[i] > nums[j])
+                    {
+                        dp[i] = Math.Max(dp[i], dp[j] + 1);
+                    }
+                }
+            }
+            return dp.Max();
+        }
+
+        /// <summary>
+        /// LIS原问题dp改进版解法，O(nlogn)
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        public int LengthOfLIS_modify(int[] nums)
+        {
+            if (nums == null || nums.Length == 0)
+            {
+                return 0;
+            }
+            int[] dp = new int[nums.Length];
+            int len = 0;
+            foreach (int num in nums)
+            {
+                int i = Array.BinarySearch(dp, 0, len, num);
+                if (i < 0)
+                {
+                    i = -(i + 1);
+                }
+                dp[i] = num;
+                if (i == len)
+                {
+                    len++;
+                }
+            }
+            return len;
+        }
+
+        /// <summary>
         /// 343. Integer Break, https://leetcode.com/problems/integer-break/submissions/
         /// 类似LIS，都是对于小于i的每一个j判断
         /// </summary>
@@ -81,6 +141,27 @@ namespace AlgorithmNote.DynamicProgramming
                 }
             }
             return temp.Last();
+        }
+
+        /// <summary>
+        /// 376. Wiggle Subsequence https://leetcode.com/problems/wiggle-subsequence/
+        /// 类似LIS原理，该解法是一个优化了时间空间复杂度的
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        public int WiggleMaxLength(int[] nums)
+        {
+            if (nums.Length < 2)
+                return nums.Length;
+            int down = 1, up = 1;
+            for (int i = 1; i < nums.Length; i++)
+            {
+                if (nums[i] > nums[i - 1])
+                    up = down + 1;
+                else if (nums[i] < nums[i - 1])
+                    down = up + 1;
+            }
+            return Math.Max(down, up);
         }
     }
 }

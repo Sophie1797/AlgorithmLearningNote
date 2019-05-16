@@ -160,6 +160,35 @@ namespace AlgorithmNote.DynamicProgramming
             return dp[C];
         }
 
+        public int FindMaxForm(string[] strs, int m, int n)
+        {
+            int[][] dp = new int[m + 1][];
+            for (int i = 0; i < m + 1; i++)
+            {
+                dp[i] = new int[n + 1];
+            }
+            foreach (string str in strs)
+            {
+                int ZeroCount = 0;
+                int OneCount = 0;
+                foreach (char c in str)
+                {
+                    if (c == '0')
+                        ZeroCount++;
+                    if (c == '1')
+                        OneCount++;
+                }
+                for (int i = m; i >= ZeroCount; i--)
+                {
+                    for (int j = n; j >= OneCount; j--)
+                    {
+                        dp[i][j] = (int)Math.Max(dp[i][j], dp[i - ZeroCount][j - OneCount] + 1);
+                    }
+                }
+            }
+            return dp[m][n];
+        }
+
         /// <summary>
         /// 完全背包问题
         /// </summary>
