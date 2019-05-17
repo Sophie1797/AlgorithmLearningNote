@@ -1,0 +1,9 @@
+D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\UnitTest\bin\Debug\UnitTest.dll
+D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\UnitTest\bin\Debug\UnitTest.pdb
+D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\UnitTest\bin\Debug\AlgorithmNote.exe
+D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\UnitTest\bin\Debug\AlgorithmNote.pdb
+D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\UnitTest\bin\Debug\zh-Hans\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\UnitTest\obj\Debug\UnitTest.dll
+D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\UnitTest\obj\Debug\UnitTest.pdb

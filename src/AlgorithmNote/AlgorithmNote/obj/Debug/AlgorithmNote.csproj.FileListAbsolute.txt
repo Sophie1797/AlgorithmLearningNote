@@ -1,2 +1,7 @@
 D:\GitRepository\AlgorithmNote\repository\AlgorithmNote\AlgorithmNote\bin\Debug\AlgorithmNote.exe.config
 D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\bin\Debug\AlgorithmNote.exe.config
+D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\bin\Debug\AlgorithmNote.exe
+D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\bin\Debug\AlgorithmNote.pdb
+D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\obj\Debug\AlgorithmNote.csprojResolveAssemblyReference.cache
+D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\obj\Debug\AlgorithmNote.exe
+D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\obj\Debug\AlgorithmNote.pdb
