@@ -52,12 +52,16 @@
   <ItemGroup>
     <Compile Include="Array\ArrayListTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queue\QueueTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AlgorithmNote\AlgorithmNote.csproj">
       <Project>{1756df3f-cb81-4710-a48d-ccc8d0f9187d}</Project>
       <Name>AlgorithmNote</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Stack\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

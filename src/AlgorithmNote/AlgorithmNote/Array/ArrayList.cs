@@ -119,6 +119,26 @@ namespace AlgorithmNote
         }
 
         /// <summary>
+        /// 获取第一个位置的元素
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
+        public T GetFirst()
+        {
+            return Get(0);
+        }
+
+        /// <summary>
+        /// 获取最后一个位置的元素
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
+        public T GetLast()
+        {
+            return Get(size - 1);
+        }
+
+        /// <summary>
         /// 修改index位置的元素为e
         /// </summary>
         /// <param name="index"></param>
