@@ -252,6 +252,18 @@ namespace AlgorithmNote
 
         }
 
+        public void Swap(int i, int j)
+        {
+            if (i < 0 || i >= size || j < 0 || j >= size)
+            {
+                throw new ArgumentException("Index is illegal.");
+            }
+
+            var t = data[i];
+            data[i] = data[j];
+            data[j] = t;
+        }
+
         public override string ToString()
         {
             var res = new StringBuilder();

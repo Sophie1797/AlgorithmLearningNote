@@ -53,6 +53,7 @@
     <Compile Include="DynamicProgramming\NumberTower.cs" />
     <Compile Include="Graph\Graph.cs" />
     <Compile Include="Graph\GraphSearch.cs" />
+    <Compile Include="Heap\MaxHeap.cs" />
     <Compile Include="LinkedList\LinkedList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

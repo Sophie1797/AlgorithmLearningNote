@@ -10,15 +10,18 @@ namespace UnitTest
         [TestMethod]
         public void TestArrayStack()
         {
-            var stack = new ArrayStack<int>();
-            for (var i = 0; i < 5; i++)
+            var queue = new LoopQueue<int>();
+            for (var i = 0; i < 10; i++)
             {
-                stack.Push(i);
-                Console.WriteLine(stack);
-            }
+                queue.Enqueue(i);
+                Console.WriteLine(queue);
 
-            stack.Pop();
-            Console.WriteLine(stack);
+                if (i % 3 == 2)
+                {
+                    queue.Dequeue();
+                    Console.WriteLine(queue);
+                }
+            }
         }
     }
 }
