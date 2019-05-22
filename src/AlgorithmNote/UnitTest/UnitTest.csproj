@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Array\ArrayListTest.cs" />
     <Compile Include="Heap\HeapTest.cs" />
+    <Compile Include="LinkedList\LinkedListTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queue\QueueTest.cs" />
     <Compile Include="Stack\StackTest.cs" />

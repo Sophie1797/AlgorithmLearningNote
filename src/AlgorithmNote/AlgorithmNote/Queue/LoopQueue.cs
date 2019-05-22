@@ -18,10 +18,8 @@ namespace AlgorithmNote
             data = new T[capacity + 1]; //loop queue need an extra space unit
         }
 
-        public LoopQueue()
-        {
-            data = new T[11];
-        }
+        public LoopQueue():this(10)
+        { }
 
         /// <summary>
         /// Get data array capacity, one unit needs to be empty, so the total capacity is length-1
