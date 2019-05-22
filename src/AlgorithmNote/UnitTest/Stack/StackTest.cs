@@ -20,5 +20,19 @@ namespace UnitTest
             stack.Pop();
             Console.WriteLine(stack);
         }
+
+        [TestMethod]
+        public void TestLinkedListStack()
+        {
+            var stack = new LinkedListStack<int>();
+            for (var i = 0; i < 5; i++)
+            {
+                stack.Push(i);
+                Console.WriteLine(stack);
+            }
+
+            stack.Pop();
+            Console.WriteLine(stack);
+        }
     }
 }

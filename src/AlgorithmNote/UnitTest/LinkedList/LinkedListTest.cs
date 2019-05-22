@@ -8,31 +8,26 @@ namespace UnitTest
     public class LinkedListTest
     {
         [TestMethod]
-        public void TestHeap()
+        public void TestLinkedList()
         {
-            int n = 1000000;
-            MaxHeap<int> heap = new MaxHeap<int>();
-            Random random = new Random();
-            for (var i = 0; i < n; i++)
+            var list = new LinkedList<int>();
+            for (var i = 0; i < 5; i++)
             {
-                heap.Add(random.Next(int.MaxValue));
+                list.AddFirst(i);
+                Console.WriteLine(list);
             }
 
-            var arr = new int[n];
-            for (var i = 0; i < n; i++)
-            {
-                arr[i] = heap.ExtractMax();
-            }
+            list.Add(2, 666);
+            Console.WriteLine(list);
 
-            for (var i = 1; i < n; i++)
-            {
-                if (arr[i - 1] < arr[i])
-                {
-                    throw new ArgumentException("Error");
-                }
-            }
+            list.Remove(2);
+            Console.WriteLine(list);
 
-            Console.WriteLine("Test Success");
+            list.RemoveFirst();
+            Console.WriteLine(list);
+
+            list.RemoveLast();
+            Console.WriteLine(list);
         }
     }
 }
