@@ -5,3 +5,4 @@ D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNot
 D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\obj\Debug\AlgorithmNote.csprojResolveAssemblyReference.cache
 D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\obj\Debug\AlgorithmNote.exe
 D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\obj\Debug\AlgorithmNote.pdb
+D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\bin\Debug\ICSharpCode.SharpZipLib.dll

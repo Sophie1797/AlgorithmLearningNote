@@ -70,7 +70,9 @@
     <Compile Include="Queue\LinkedListQueue.cs" />
     <Compile Include="Queue\LoopQueue.cs" />
     <Compile Include="Search\BinarySearch.cs" />
-    <Compile Include="Sort\SortBasic.cs" />
+    <Compile Include="Sort\AdancedSort.cs" />
+    <Compile Include="Sort\SortAppication.cs" />
+    <Compile Include="Sort\BasicSort.cs" />
     <Compile Include="Stack\ArrayStack.cs" />
     <Compile Include="Stack\IStack.cs" />
     <Compile Include="Stack\LinkedListStack.cs" />

@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace AlgorithmNote
 {
-    public class SortBasic
+    public class BasicSort<T> where T : IComparable
     {
         #region 1. Insert Sort
-        public void InsertSort(int[] arr, int n)
+        // 数组近乎有序的时候，效率特别高
+        public static void InsertSort(T[] arr, int n)
         {
             for (var i = 1; i < n; i++)
             {
@@ -18,7 +19,7 @@ namespace AlgorithmNote
                 //把i位置元素空出来，拎出去存着
                 var j = i;
                 //从i位置开始复制前一个的值
-                while (j > 0 && temp < arr[j - 1])
+                while (j > 0 && temp.CompareTo(arr[j - 1]) < 0)
                 {
                     arr[j] = arr[j - 1];
                     j--;
@@ -30,15 +31,15 @@ namespace AlgorithmNote
         #endregion
 
         #region 2. Select Sort
-        public void SelectSort(int[] arr, int n)
+        public static void SelectSort(T[] arr, int n)
         {
             for (var i = 0; i < n; i++)
             {
-                //找出后面数里面值最小的格的下标
+                //找出[i, n)区间里面值最小的格的下标
                 var min = i;
                 for (var j = i + 1; j < n; j++)
                 {
-                    if (arr[j] < arr[min]) min = j;
+                    if (arr[j].CompareTo(arr[min]) < 0) min = j;
                 }
 
                 var temp = arr[i];
@@ -49,7 +50,34 @@ namespace AlgorithmNote
         #endregion
 
         #region 3. Bubble Sort
-        public void BubbleSort(int[] arr, int n)
+        /// <summary>
+        /// 优化后的bubble sort
+        /// </summary>
+        public static void BubbleSort(T[] arr, int n)
+        {
+            var swapped = true;
+            //注意i的范围
+            for (var i = 0; swapped && i < n - 1; i++)
+            {
+                swapped = false;
+                //注意j的范围
+                for (var j = 0; j < n - i - 1; j++)
+                {
+                    if (arr[j + 1].CompareTo(arr[j]) < 0)
+                    {
+                        var temp = arr[j + 1];
+                        arr[j + 1] = arr[j];
+                        arr[j] = temp;
+                        swapped = true;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// 没有经过优化的bubble sort
+        /// </summary>
+        public static void BubbleSort_Slow(T[] arr, int n)
         {
             //注意i的范围
             for (var i = 0; i < n - 1; i++)
@@ -57,7 +85,7 @@ namespace AlgorithmNote
                 //注意j的范围
                 for (var j = 0; j < n - i - 1; j++)
                 {
-                    if (arr[j + 1] < arr[j])
+                    if (arr[j + 1].CompareTo(arr[j]) < 0)
                     {
                         var temp = arr[j + 1];
                         arr[j + 1] = arr[j];
@@ -69,7 +97,7 @@ namespace AlgorithmNote
         #endregion
 
         #region 4. Merge Sort
-        public void MergeSort(int[] arr, int l, int r)
+        public static void MergeSort(T[] arr, int l, int r)
         {
             //注意是闭区间
             if (l >= r) return;
@@ -79,7 +107,7 @@ namespace AlgorithmNote
             Merge(arr, l, mid, mid + 1, r);
         }
 
-        public void MergeSort(int[] arr, int n)
+        public static void MergeSort(T[] arr, int n)
         {
             //step为组内元素个数，step/2是左子区间元素个数
             for (var step = 2; step / 2 < n; step *= 2)
@@ -92,13 +120,13 @@ namespace AlgorithmNote
             }
         }
 
-        public int[] Merge(int[] arr, int l1, int r1, int l2, int r2)
+        public static T[] Merge(T[] arr, int l1, int r1, int l2, int r2)
         {
-            var res = new int[arr.Length];
+            var res = new T[arr.Length];
             var i = l1; var j = l2; var k = 0;
             while (i <= r1 && j <= r2)
             {
-                if (arr[i] < arr[j])
+                if (arr[i].CompareTo(arr[j]) < 0)
                     res[k++] = arr[i++];
                 else
                     res[k++] = arr[j++];
@@ -113,7 +141,7 @@ namespace AlgorithmNote
         #endregion
 
         #region 5. Quick Sort
-        public void QuickSort(int[] arr, int left, int right)
+        public static void QuickSort(T[] arr, int left, int right)
         {
             if (left >= right) return;
             var pos = Partirion(arr, left, right);
@@ -122,14 +150,14 @@ namespace AlgorithmNote
             QuickSort(arr, pos + 1, right);
         }
 
-        public int Partirion(int[] arr, int left, int right)
+        public static int Partirion(T[] arr, int left, int right)
         {
             var mid = arr[left];
             while (left < right)
             {
-                while (left < right && arr[right] > mid) right--;
+                while (left < right && arr[right].CompareTo(mid) > 0) right--;
                 arr[left] = arr[right];
-                while (left < right && arr[left] <= mid) left++;
+                while (left < right && arr[left].CompareTo(mid) <= 0) left++;
                 arr[right] = arr[left];
             }
 
@@ -139,7 +167,7 @@ namespace AlgorithmNote
         #endregion
 
         #region 6. Bucket Sort
-        public void BucketSort(int[] arr)
+        public static void BucketSort(int[] arr)
         {
             if (arr == null || arr.Length < 2)
             {
@@ -172,7 +200,7 @@ namespace AlgorithmNote
         #region 7. Radix Sort
         //基数排序(Radix Sort)是桶排序的扩展,它的基本思想是：将整数按位数切割成不同的数字，然后按每个位数分别比较。
         //具体做法是：将所有待比较数值统一为同样的数位长度，数位较短的数前面补零。然后，从最低位开始，依次进行一次排序。这样从最低位排序一直到最高位排序完成以后, 数列就变成一个有序序列
-        public void RadixSort(int[] a, int n)
+        public static void RadixSort(int[] a, int n)
         {
             var exp = 0;    // 指数。当对数组按各位进行排序时，exp=1；按十位进行排序时，exp=10；...
             var max = a.Max();    // 数组a中的最大值
@@ -182,7 +210,7 @@ namespace AlgorithmNote
                 CountSort(a, n, exp);
         }
 
-        public void CountSort(int[] a, int n, int exp)
+        public static void CountSort(int[] a, int n, int exp)
         {
             var output = new int[n];
             var buckets = new int[10];
@@ -198,7 +226,7 @@ namespace AlgorithmNote
 
             // 将数据存储到临时数组output[]中
             // 十位数同为3时先把上一次排好序的个位数大的那个放好，放在较靠后位置上，所以从后向前遍历
-            for (i = a.Length-1; i >=0; i--)
+            for (i = a.Length - 1; i >= 0; i--)
             {
                 output[buckets[(a[i] / exp) % 10] - 1] = a[i];
                 buckets[(a[i] / exp) % 10]--;
@@ -211,9 +239,9 @@ namespace AlgorithmNote
         #endregion
 
         #region 8. Heap Sort
-        public void HeapSort(int[] arr)
+        public static void HeapSort(T[] arr)
         {
-            var heap = new MaxHeap<int>(arr);
+            var heap = new MaxHeap<T>(arr);
             var i = 0;
             while (!heap.IsEmpty())
             {
@@ -223,7 +251,7 @@ namespace AlgorithmNote
         #endregion
 
         #region 9. Shell Sort
-        public void ShellSort(int[] arr)
+        public static void ShellSort(int[] arr)
         {
 
         }
@@ -231,7 +259,7 @@ namespace AlgorithmNote
 
         #region 10. 外部排序
 
-        
+
 
         #endregion
 
