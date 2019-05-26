@@ -71,8 +71,15 @@
     <Compile Include="Queue\LoopQueue.cs" />
     <Compile Include="Search\BinarySearch.cs" />
     <Compile Include="Sort\AdancedSort.cs" />
+    <Compile Include="Sort\BasicSort\BubbleSort.cs" />
+    <Compile Include="Sort\BasicSort\BucketSort.cs" />
+    <Compile Include="Sort\BasicSort\HeapSort.cs" />
+    <Compile Include="Sort\BasicSort\InsertSort.cs" />
+    <Compile Include="Sort\BasicSort\MergeSort.cs" />
+    <Compile Include="Sort\BasicSort\QuickSort.cs" />
+    <Compile Include="Sort\BasicSort\RadixSort.cs" />
+    <Compile Include="Sort\BasicSort\SelectSort.cs" />
     <Compile Include="Sort\SortAppication.cs" />
-    <Compile Include="Sort\BasicSort.cs" />
     <Compile Include="Stack\ArrayStack.cs" />
     <Compile Include="Stack\IStack.cs" />
     <Compile Include="Stack\LinkedListStack.cs" />
