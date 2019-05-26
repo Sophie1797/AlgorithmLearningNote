@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Array\ArrayList.cs" />
+    <Compile Include="Design\LFU.cs" />
+    <Compile Include="Design\LRU.cs" />
     <Compile Include="DynamicProgramming\ClimbingStairs.cs" />
     <Compile Include="DynamicProgramming\DAG.cs" />
     <Compile Include="DynamicProgramming\LCS.cs" />
@@ -53,26 +59,32 @@
     <Compile Include="DynamicProgramming\NumberTower.cs" />
     <Compile Include="Graph\Graph.cs" />
     <Compile Include="Graph\GraphSearch.cs" />
+    <Compile Include="Graph\UF.cs" />
     <Compile Include="Heap\MaxHeap.cs" />
     <Compile Include="LinkedList\LinkedList.cs" />
+    <Compile Include="Math\BigNumOperation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queue\ArrayQueue.cs" />
     <Compile Include="Queue\IQueue.cs" />
     <Compile Include="Queue\LinkedListQueue.cs" />
     <Compile Include="Queue\LoopQueue.cs" />
+    <Compile Include="Search\BinarySearch.cs" />
+    <Compile Include="Sort\SortBasic.cs" />
     <Compile Include="Stack\ArrayStack.cs" />
     <Compile Include="Stack\IStack.cs" />
     <Compile Include="Stack\LinkedListStack.cs" />
+    <Compile Include="String\KMP.cs" />
+    <Compile Include="Tree\AVL.cs" />
     <Compile Include="Tree\BST.cs" />
+    <Compile Include="Tree\SegmentTree.cs" />
+    <Compile Include="Tree\Trie.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Sort\" />
-    <Folder Include="String\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -32,6 +32,13 @@ namespace AlgorithmNote
             size = 0;
         }
 
+        public ArrayList(T[] arr)
+        {
+            size = arr.Length;
+            data = new T[size];
+            Array.Copy(arr, data, size);
+        }
+
         /// <summary>
         /// 获取数组中的元素个数
         /// </summary>

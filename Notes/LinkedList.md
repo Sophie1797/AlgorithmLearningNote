@@ -24,6 +24,7 @@
     * [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
     * [148. Sort List](https://leetcode.com/problems/sort-list/)
 * **Two pointers(fast and slow)**
+    这类题一般设置两个指针，一个快指针，一个慢指针，一般情况下，慢指针一次走一步，快指针一次走两步，快指针走到结尾的时候，慢指针就刚好走到了正中间。如果链表有环的话，这样一直走下去，快慢指针会相遇，相遇后，快指针一次走一步，慢指针从开头重新开始走且一次走一步，再次相遇的节点就是环的起始点
     * [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
     * [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
     * [142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)

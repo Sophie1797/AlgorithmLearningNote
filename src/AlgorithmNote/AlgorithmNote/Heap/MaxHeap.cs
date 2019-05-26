@@ -20,6 +20,15 @@ namespace AlgorithmNote
             data = new ArrayList<T>();
         }
 
+        public MaxHeap(T[] arr)
+        {
+            data = new ArrayList<T>(arr);
+            for (var i = Parent(arr.Length - 1); i >= 0; i--)
+            {
+                SiftDown(i);
+            }
+        }
+
         /// <summary>
         /// 返回堆中元素个数
         /// </summary>
@@ -138,6 +147,19 @@ namespace AlgorithmNote
                 data.Swap(k, j);
                 k = j;
             }
+        }
+
+        /// <summary>
+        /// 取出堆中最大元素，并且替换成元素e
+        /// </summary>
+        /// <param name="e"></param>
+        /// <returns></returns>
+        public T Replace(T e)
+        {
+            var ret = FindMax();
+            data.Set(0, e);
+            SiftDown(0);
+            return ret;
         }
     }
 }
