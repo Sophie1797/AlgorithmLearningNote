@@ -53,8 +53,11 @@
 ### DFS
 
 ### Topological Sort
+Actually, topological is the result of DFS.
+Topological sort source code:
 
 ## Union Find
+Union Find implement: [UF.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Graph/UF.cs)
 
 ## 最短路径
 

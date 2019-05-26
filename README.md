@@ -26,9 +26,10 @@ Langurage: C#
 
 
 **Reference:**
-[1] https://github.com/liuyubobobo/Play-with-Algorithms
-[2] https://github.com/liuyubobobo/Play-Leetcode
-[3] https://github.com/liuyubobobo/Play-with-Data-Structures
-[4] https://leetcode.com/
-[5] https://www.nowcoder.com/activity/oj
-[6] (美)科曼(Cormen,T.H.) 等著, 殷建平 等译.算法导论[Z]. : 机械工业出版社,2013.
+
+[1] https://github.com/liuyubobobo/Play-with-Algorithms <br/>
+[2] https://github.com/liuyubobobo/Play-Leetcode <br/>
+[3] https://github.com/liuyubobobo/Play-with-Data-Structures <br/>
+[4] https://leetcode.com/ <br/>
+[5] https://www.nowcoder.com/activity/oj <br/>
+[6] (美)科曼(Cormen,T.H.) 等著, 殷建平 等译.算法导论[Z]. : 机械工业出版社,2013. <br/>

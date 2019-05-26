@@ -1,6 +1,7 @@
 # Stack
 ## Implement Stack
-
+Use array: [ArrayStack.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Stack/ArrayStack.cs)
+Use LinkedList: [LinkedListStack.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Stack/LinkedListStack.cs)
 ## Problem Summary
 * **用栈逐个消除something**
     * [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)

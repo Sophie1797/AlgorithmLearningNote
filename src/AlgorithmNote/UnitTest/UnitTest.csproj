@@ -56,6 +56,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queue\QueueTest.cs" />
     <Compile Include="Sort\BubbleSortTest.cs" />
+    <Compile Include="Sort\SortBaseTest.cs" />
     <Compile Include="Stack\StackTest.cs" />
     <Compile Include="Tree\TreeTest.cs" />
   </ItemGroup>
