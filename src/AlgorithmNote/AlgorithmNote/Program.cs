@@ -11,28 +11,51 @@ namespace AlgorithmNote
     {
         static void Main(string[] args)
         {
-            for (var i = 0; i < 1000000; i++)
-            {
-                var arr = GenerateTestCase(i);
-                var stopwatch = new Stopwatch();
-                stopwatch.Start();
-                BubbleSort<int>.Sort(arr, i);
-                stopwatch.Stop();
-                var time = stopwatch.ElapsedMilliseconds / 1000;
-                Console.WriteLine("BubbleSort in {0} minutes, {1} seconds", time / 60, time % 60);
-                
-            }
-            
+            var i = 10000;
+            var arr = GenerateTestCase(i);
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
+            QuickSort<int>.Sort(arr, 0, i - 1);
+            stopwatch.Stop();
+            var time = stopwatch.ElapsedMilliseconds;
+            Console.WriteLine(time);
+
+            stopwatch = new Stopwatch();
+            stopwatch.Start();
+            QuickSort<int>.Sort_Rand(arr, 0, i - 1);
+            stopwatch.Stop();
+            time = stopwatch.ElapsedMilliseconds;
+            Console.WriteLine(time);
+
+            stopwatch = new Stopwatch();
+            stopwatch.Start();
+            QuickSort<int>.Sort_3Ways(arr, 0, i - 1);
+            stopwatch.Stop();
+            time = stopwatch.ElapsedMilliseconds;
+            Console.WriteLine(time);
         }
 
         public static int[] GenerateTestCase(int n)
         {
             var res = new int[n];
-            var random = new Random();
+            var random = new Random(111);
+            for (var i = 0; i < n; i++)
+            {
+                res[i] = random.Next(20);
+            }
+
+            return res;
+        }
+
+        public static int[] GenerateSortedTestCase(int n)
+        {
+            var res = new int[n];
+            var random = new Random(111);
             for (var i = 0; i < n; i++)
             {
                 res[i] = random.Next();
             }
+            Array.Sort(res);
 
             return res;
         }
