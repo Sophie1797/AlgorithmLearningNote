@@ -13,8 +13,18 @@
     2. 不保证上述条件，只保证从左到右，从上到下有序
     [240. Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/)
 
+## BFS & DFS
+这两种方法一般可以同时适用一道题，有时候题目并不是给出传统意义上的图论中的图，需要自己把问题抽象为图的形状
+
 ## DFS
 ### Problem Summary
+* DFS in Tree
+基本就是树的preOrder, inOrder, postOrder遍历, 在树那章已经有总结，本章主要关注图
+
 
 ## BFS
 ### Problem Summary
+* BFS in Tree
+基本就是树的levelOrder遍历, 在树那章已经有总结，本章主要关注图
+* 从外围向内
+    * [310. Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/)
