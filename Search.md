@@ -16,15 +16,30 @@
 ## BFS & DFS
 这两种方法一般可以同时适用一道题，有时候题目并不是给出传统意义上的图论中的图，需要自己把问题抽象为图的形状
 
-## DFS
-### Problem Summary
+### DFS
+#### Problem Summary
 * DFS in Tree
-基本就是树的preOrder, inOrder, postOrder遍历, 在树那章已经有总结，本章主要关注图
+    基本就是树的preOrder, inOrder, postOrder遍历, 在树那章已经有总结
+* 寻找可达的范围
+    * []()
 
 
-## BFS
-### Problem Summary
+### BFS
+#### Problem Summary
 * BFS in Tree
-基本就是树的levelOrder遍历, 在树那章已经有总结，本章主要关注图
+基本就是树的levelOrder遍历, 在树那章已经有总结
 * 从外围向内
     * [310. Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/)
+
+
+
+### BFS & DFS Problem Summary
+* 迷宫系列
+    * [490. The Maze](https://leetcode-cn.com/problems/the-maze/)
+    * [505. The Maze II](https://leetcode-cn.com/problems/the-maze-ii/)
+    * [499. The Maze III](https://leetcode-cn.com/problems/the-maze-iii/)
+    * [1036. Escape a Large Maze](https://leetcode-cn.com/problems/escape-a-large-maze/)
+
+* 词语接龙系列
+    * [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
+    * [126. Word Ladder II](https://leetcode.com/problems/word-ladder-ii/)

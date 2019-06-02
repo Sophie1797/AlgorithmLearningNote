@@ -48,13 +48,12 @@
 有向图G=(V,E)的强连通分量是一个最大结点集合C⊆V，对于该集合中的任意一对结点u和v来说，路径u→v和路径v→u同时存在；也就是说，结点u和结点v相互可达。
 
 ## Traversal Graph
-### BFS
-
-### DFS
-
 ### Topological Sort
 Actually, topological is the result of DFS.
 Topological sort source code:
+### Problems Summary
+* 判断图中是否有环
+    * [261. 以图判树](https://leetcode-cn.com/problems/graph-valid-tree/)
 
 ## Union Find
 Union Find implement: [UF.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Graph/UF.cs)

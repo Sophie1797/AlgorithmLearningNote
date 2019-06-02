@@ -20,3 +20,13 @@
 * **Find Rules Problem**
 
 ## Bit Macipulation
+
+
+## Geometry
+* 共线问题
+    * [149. Max Points on a Line](https://leetcode.com/problems/max-points-on-a-line/)
+
+* 距离问题
+    * [973. K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
+    * [612. Shortest Distance in a Plane](https://leetcode-cn.com/problems/shortest-distance-in-a-plane/)
+    * [613. Shortest Distance in a Line](https://leetcode-cn.com/problems/shortest-distance-in-a-line/)

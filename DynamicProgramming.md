@@ -76,3 +76,18 @@
     $$ dp[0][v]=0\ (0{\leq}v{\leq}V)$$
     leetcode中类似题目：
     * [322. Coin Change](https://leetcode.com/problems/coin-change/)
+
+* **词语分割系列**
+    * [139. Word Break](https://leetcode.com/problems/word-break/)
+    * [140. Word Break II](https://leetcode.com/problems/word-break-ii/)
+
+* **卖股票系列**
+    * [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+    * [122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
+    * [123. Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)
+    * [188. Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)
+    * [309. Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
+    * [714. Best Time to Buy and Sell Stock with Transaction Fee](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
+
+* **Two pass DP**
+    * [542. 01 Matrix](https://leetcode.com/problems/01-matrix/)
