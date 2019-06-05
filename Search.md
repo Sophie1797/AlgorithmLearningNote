@@ -22,6 +22,8 @@
     基本就是树的preOrder, inOrder, postOrder遍历, 在树那章已经有总结
 * 寻找可达的范围
     * []()
+* 求连通块
+一般这类问题也可以用并查集解决，eg. flood fill
 
 
 ### BFS
@@ -30,7 +32,7 @@
 基本就是树的levelOrder遍历, 在树那章已经有总结
 * 从外围向内
     * [310. Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/)
-
+* 求最短路
 
 
 ### BFS & DFS Problem Summary
