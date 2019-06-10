@@ -19,6 +19,7 @@ Source code: [BasicSort.cs](https://github.com/Sophie1797/AlgorithmLearningNote/
 Source code: [AdancedSort.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Sort/AdancedSort.cs)
 
 1. Color Sort
+其实就是三路快排
 [75. Sort Colors](https://leetcode.com/problems/sort-colors/)
 
 ## Problem Summary
