@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Cache
 {
+    /// <summary>
+    /// "最不经常使用"缓存算法
+    /// </summary>
     public class LFUCache
     {
         public int Cap;

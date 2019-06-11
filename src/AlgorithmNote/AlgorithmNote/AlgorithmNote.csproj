@@ -85,8 +85,11 @@
     <Compile Include="Sort\BasicSort\SelectSort.cs" />
     <Compile Include="Sort\SortAppication.cs" />
     <Compile Include="Stack\ArrayStack.cs" />
+    <Compile Include="Stack\FreqStack.cs" />
     <Compile Include="Stack\IStack.cs" />
     <Compile Include="Stack\LinkedListStack.cs" />
+    <Compile Include="Stack\MinStack.cs" />
+    <Compile Include="Stack\OrderedStack.cs" />
     <Compile Include="String\KMP.cs" />
     <Compile Include="Tree\AVL.cs" />
     <Compile Include="Tree\BST.cs" />

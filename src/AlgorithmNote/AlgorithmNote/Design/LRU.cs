@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Cache
 {
+    /// <summary>
+    /// "最近最少使用"缓存算法
+    /// </summary>
     public class LRUCache
     {
         public LinkedList<Tuple<int, int>> lru = new LinkedList<Tuple<int, int>>();
