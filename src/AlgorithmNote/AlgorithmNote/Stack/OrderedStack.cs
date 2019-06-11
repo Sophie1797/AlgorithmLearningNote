@@ -80,5 +80,63 @@ namespace AlgorithmNote
             }
             return res;
         }
+
+        /// <summary>
+        /// 901. 股票价格跨度
+        /// 编写一个 StockSpanner 类，它收集某些股票的每日报价，并返回该股票当日价格的跨度。
+        /// 今天股票价格的跨度被定义为股票价格小于或等于今天价格的最大连续日数
+        /// （从今天开始往回数，包括今天）。
+        /// in: ["StockSpanner","next","next","next","next","next","next","next"]
+        /// out: [[],[100],[80],[60],[70],[60],[75],[85]]
+        /// </summary>
+        public class StockSpanner
+        {
+            public Stack<int> prices;
+            public Stack<int> weight;
+            public StockSpanner()
+            {
+                prices = new Stack<int>();
+                weight = new Stack<int>();
+            }
+
+            public int Next(int price)
+            {
+                int w = 1;
+                while (prices.Count != 0 && prices.Peek() <= price)
+                {
+                    prices.Pop();
+                    w += weight.Pop();
+                }
+                prices.Push(price);
+                weight.Push(w);
+                return w;
+            }
+        }
+
+        //84. 柱状图中最大的矩形
+        public int LargestRectangleArea(int[] heights)
+        {
+            if ((heights == null) || (heights.Length == 0)) return 0;
+            var N = heights.Length;
+            int[] s = new int[N + 1];
+            int i, top = 0, hi, area = 0;
+            s[0] = -1;
+            for (i = 0; i < N; i++)
+            {
+                hi = heights[i];
+                while ((top > 0) && (heights[s[top]] > hi))
+                {
+                    area = Math.Max(area, heights[s[top]] * (i - s[top - 1] - 1));
+                    top--;
+                }
+                s[++top] = i;
+            }
+            while (top > 0)
+            {
+                area = Math.Max(area, heights[s[top]] * (N - s[top - 1] - 1));
+                top--;
+            }
+            return area;
+        }
     }
 }
