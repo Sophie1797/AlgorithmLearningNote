@@ -57,8 +57,9 @@
     <Compile Include="DynamicProgramming\LIS.cs" />
     <Compile Include="DynamicProgramming\LPS.cs" />
     <Compile Include="DynamicProgramming\NumberTower.cs" />
-    <Compile Include="Graph\Graph.cs" />
+    <Compile Include="Graph\DenseGraph.cs" />
     <Compile Include="Graph\GraphSearch.cs" />
+    <Compile Include="Graph\SparseGraph.cs" />
     <Compile Include="Graph\UF.cs" />
     <Compile Include="Heap\MaxHeap.cs" />
     <Compile Include="LinkedList\LinkedList.cs" />
@@ -70,7 +71,9 @@
     <Compile Include="Queue\IQueue.cs" />
     <Compile Include="Queue\LinkedListQueue.cs" />
     <Compile Include="Queue\LoopQueue.cs" />
-    <Compile Include="Search\BinarySearch.cs" />
+    <Compile Include="Search\BinarySearch1D\BinarySearchBasic.cs" />
+    <Compile Include="Search\BinarySearch1D\BinarySearchOfRotateArray.cs" />
+    <Compile Include="Search\BinarySearch2D.cs" />
     <Compile Include="Sort\AdancedSort.cs" />
     <Compile Include="Sort\BasicSort\BubbleSort.cs" />
     <Compile Include="Sort\BasicSort\BucketSort.cs" />
