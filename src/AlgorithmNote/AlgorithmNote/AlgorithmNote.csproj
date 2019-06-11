@@ -95,6 +95,7 @@
     <Compile Include="Tree\BST.cs" />
     <Compile Include="Tree\SegmentTree.cs" />
     <Compile Include="Tree\Trie.cs" />
+    <Compile Include="TwoPointers\TrapWater.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

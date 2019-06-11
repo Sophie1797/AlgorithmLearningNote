@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlgorithmNote.Graph
+namespace AlgorithmNote
 {
     /// <summary>
     /// 用邻接矩阵实现稠密图

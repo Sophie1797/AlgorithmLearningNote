@@ -113,7 +113,9 @@ namespace AlgorithmNote
             }
         }
 
-        //84. 柱状图中最大的矩形
+        /// <summary>
+        /// 84. 柱状图中最大的矩形
+        /// </summary>
         public int LargestRectangleArea(int[] heights)
         {
             if ((heights == null) || (heights.Length == 0)) return 0;
