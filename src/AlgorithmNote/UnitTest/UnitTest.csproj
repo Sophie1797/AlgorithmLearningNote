@@ -51,10 +51,12 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Array\ArrayListTest.cs" />
+    <Compile Include="Graph\GraphTest.cs" />
     <Compile Include="Heap\HeapTest.cs" />
     <Compile Include="LinkedList\LinkedListTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queue\QueueTest.cs" />
+    <Compile Include="Sort\QuickSortTest.cs" />
     <Compile Include="Sort\BubbleSortTest.cs" />
     <Compile Include="Sort\SortBaseTest.cs" />
     <Compile Include="Stack\StackTest.cs" />

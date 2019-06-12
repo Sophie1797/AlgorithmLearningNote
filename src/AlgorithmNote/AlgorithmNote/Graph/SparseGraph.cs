@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace AlgorithmNote
     {
         private int n, m;//n:顶点的个数，m:边的个数
         private bool directed;//表示这个图是有向图还是无向图
-        private List<List<int>> graph;
+        private List<List<int>> graph = new List<List<int>>();
 
         /// <summary>
         /// 构造函数
@@ -87,6 +88,54 @@ namespace AlgorithmNote
             }
 
             return false;
+        }
+
+        public class AdjIterator: IEnumerable
+        {
+            private SparseGraph G;
+            private int v;
+            private int index;
+
+            public AdjIterator(SparseGraph graph, int v)
+            {
+                G = graph;
+                this.v = v;
+            }
+
+            public int Begin()
+            {
+                index = 0;
+                if (G.graph[v].Count != 0)
+                {
+                    return G.graph[v][index];
+                }
+
+                return -1;
+            }
+
+            public int Next()
+            {
+                index++;
+                if (index < G.graph[v].Count)
+                {
+                    return G.graph[v][index];
+                }
+
+                return -1;
+            }
+
+            public bool End()
+            {
+                return index >= G.graph[v].Count;
+            }
+
+            public IEnumerator GetEnumerator()
+            {
+                foreach (var w in G.graph[v])
+                {
+                    yield return w;
+                }
+            }
         }
     }
 }

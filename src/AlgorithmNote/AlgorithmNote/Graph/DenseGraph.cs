@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace AlgorithmNote
     {
         private int n, m;//n:顶点的个数，m:边的个数
         private bool directed;//表示这个图是有向图还是无向图
-        private List<List<bool>> graph;
+        private List<List<bool>> graph = new List<List<bool>>();
 
         /// <summary>
         /// 构造函数
@@ -26,7 +27,7 @@ namespace AlgorithmNote
             this.directed = directed;
             for (var i = 0; i < n; i++)
             {
-                graph.Add(new List<bool>(n));
+                graph.Add(new List<bool>(new bool[n]));
             }
         }
 
@@ -85,6 +86,55 @@ namespace AlgorithmNote
             }
 
             return graph[v][w];
+        }
+
+        public class AdjIterator : IEnumerable
+        {
+            private DenseGraph G;
+            private int v;
+            private int index;
+
+            public AdjIterator(DenseGraph graph, int v)
+            {
+                G = graph;
+                this.v = v;
+                index = -1;
+            }
+
+            public int Begin()
+            {
+                index = -1;
+                return Next();
+            }
+
+            public int Next()
+            {
+                for (index += 1; index < G.V(); index++)
+                {
+                    if (G.graph[v][index])
+                    {
+                        return index;
+                    }
+                }
+
+                return -1;
+            }
+
+            public bool End()
+            {
+                return index >= G.V();
+            }
+
+            public IEnumerator GetEnumerator()
+            {
+                for (var i = 0; i < G.V(); i++)
+                {
+                    if (G.graph[v][i])
+                    {
+                        yield return i;
+                    }
+                }
+            }
         }
     }
 }

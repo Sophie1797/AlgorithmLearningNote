@@ -11,11 +11,24 @@ namespace UnitTest
         public static int[] GenerateTestCase(int n)
         {
             var res = new int[n];
-            var random = new Random();
+            var random = new Random(111);
+            for (var i = 0; i < n; i++)
+            {
+                res[i] = random.Next(20);
+            }
+
+            return res;
+        }
+
+        public static int[] GenerateSortedTestCase(int n)
+        {
+            var res = new int[n];
+            var random = new Random(111);
             for (var i = 0; i < n; i++)
             {
                 res[i] = random.Next();
             }
+            Array.Sort(res);
 
             return res;
         }
