@@ -57,6 +57,7 @@
     <Compile Include="DynamicProgramming\LIS.cs" />
     <Compile Include="DynamicProgramming\LPS.cs" />
     <Compile Include="DynamicProgramming\NumberTower.cs" />
+    <Compile Include="Graph\Component.cs" />
     <Compile Include="Graph\DenseGraph.cs" />
     <Compile Include="Graph\GraphSearch.cs" />
     <Compile Include="Graph\IGraph.cs" />
@@ -104,6 +105,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Graph\testG2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Graph\testG1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

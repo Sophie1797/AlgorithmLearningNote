@@ -50,5 +50,27 @@ namespace UnitTest
                 Console.WriteLine("");
             }
         }
+
+        public void ReadGraphTest()
+        {
+            string fileName = @"Graph\testG1.txt";
+
+            var g1 = new SparseGraph(13, false);
+            var rg1 = new ReadGraph(g1, fileName);
+            g1.Show();
+
+            var g2 = new DenseGraph(13, false);
+            var rg2 = new ReadGraph(g2, fileName);
+            g2.Show();
+        }
+
+        public void ComponentTest()
+        {
+            string fileName = @"Graph\testG1.txt";
+            var g1 = new SparseGraph(13, false);
+            var gr1 = new ReadGraph(g1, fileName);
+            var component1 = new Component(g1);
+            Console.WriteLine(component1.Count());
+        }
     }
 }

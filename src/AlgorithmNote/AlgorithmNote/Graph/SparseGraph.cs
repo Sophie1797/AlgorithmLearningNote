@@ -103,6 +103,11 @@ namespace AlgorithmNote
             }
         }
 
+        public IEnumerable GetAdjIterator(int v)
+        {
+            return new AdjIterator(this, v);
+        }
+
         public class AdjIterator: IEnumerable
         {
             private SparseGraph G;

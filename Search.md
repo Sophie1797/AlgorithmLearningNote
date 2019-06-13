@@ -25,7 +25,7 @@
 #### Problem Summary
 * DFS in Tree
     基本就是树的preOrder, inOrder, postOrder遍历, 在树那章已经有总结
-* 求连通块
+* 求连通分量
 一般这类问题可以用BFS也可以用DFS，DFS的递归代码看起来更美观简洁。此问题也可以用并查集解决。
     * [733. 图像渲染](https://leetcode-cn.com/problems/flood-fill/)
     * [130. 被围绕的区域](https://leetcode-cn.com/problems/surrounded-regions/)
