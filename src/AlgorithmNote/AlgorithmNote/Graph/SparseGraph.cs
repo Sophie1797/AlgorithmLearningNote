@@ -10,7 +10,7 @@ namespace AlgorithmNote
     /// <summary>
     /// 用邻接表实现稀疏图
     /// </summary>
-    public class SparseGraph
+    public class SparseGraph: IGraph
     {
         private int n, m;//n:顶点的个数，m:边的个数
         private bool directed;//表示这个图是有向图还是无向图
@@ -88,6 +88,19 @@ namespace AlgorithmNote
             }
 
             return false;
+        }
+
+        public void Show()
+        {
+            for (var i = 0; i < n; i++)
+            {
+                Console.Write($"vertex {i}:\t");
+                for (var j = 0; j < graph[i].Count; j++)
+                {
+                    Console.Write(graph[i][j] + "\t");
+                }
+                Console.WriteLine();
+            }
         }
 
         public class AdjIterator: IEnumerable

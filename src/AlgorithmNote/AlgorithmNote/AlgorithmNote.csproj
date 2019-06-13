@@ -59,6 +59,8 @@
     <Compile Include="DynamicProgramming\NumberTower.cs" />
     <Compile Include="Graph\DenseGraph.cs" />
     <Compile Include="Graph\GraphSearch.cs" />
+    <Compile Include="Graph\IGraph.cs" />
+    <Compile Include="Graph\ReadGraph.cs" />
     <Compile Include="Graph\SparseGraph.cs" />
     <Compile Include="Graph\UF.cs" />
     <Compile Include="Heap\MaxHeap.cs" />
@@ -101,7 +103,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Graph\testG1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

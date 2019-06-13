@@ -10,7 +10,7 @@ namespace AlgorithmNote
     /// <summary>
     /// 用邻接矩阵实现稠密图
     /// </summary>
-    public class DenseGraph
+    public class DenseGraph: IGraph
     {
         private int n, m;//n:顶点的个数，m:边的个数
         private bool directed;//表示这个图是有向图还是无向图
@@ -86,6 +86,19 @@ namespace AlgorithmNote
             }
 
             return graph[v][w];
+        }
+
+        public void Show()
+        {
+            for (var i = 0; i < n; i++)
+            {
+                for (var j = 0; j < n; j++)
+                {
+                    var value = graph[i][j] ? 1 : 0;
+                    Console.Write(value + "\t");
+                }
+                Console.WriteLine();
+            }
         }
 
         public class AdjIterator : IEnumerable
