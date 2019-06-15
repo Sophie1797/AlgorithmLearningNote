@@ -61,7 +61,9 @@
     <Compile Include="Graph\DenseGraph.cs" />
     <Compile Include="Graph\GraphSearch.cs" />
     <Compile Include="Graph\IGraph.cs" />
+    <Compile Include="Graph\Path.cs" />
     <Compile Include="Graph\ReadGraph.cs" />
+    <Compile Include="Graph\ShortestPath.cs" />
     <Compile Include="Graph\SparseGraph.cs" />
     <Compile Include="Graph\UF.cs" />
     <Compile Include="Heap\MaxHeap.cs" />

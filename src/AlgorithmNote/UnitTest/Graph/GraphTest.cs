@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AlgorithmNote;
+using AlgorithmNote.Graph;
 
 namespace UnitTest
 {
@@ -71,6 +72,17 @@ namespace UnitTest
             var gr1 = new ReadGraph(g1, fileName);
             var component1 = new Component(g1);
             Console.WriteLine(component1.Count());
+        }
+
+        public void PathTest()
+        {
+            string fileName = @"Graph\testG2.txt";
+            var g1 = new SparseGraph(7, false);
+            var gr1 = new ReadGraph(g1, fileName);
+            g1.Show();
+            var path = new Path(g1, 0);
+            Console.WriteLine("DFS: ");
+            path.ShowPath(6);
         }
     }
 }

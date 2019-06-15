@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AlgorithmNote.Graph;
 
 namespace AlgorithmNote
 {
@@ -13,6 +14,7 @@ namespace AlgorithmNote
         static void Main(string[] args)
         {
             
+
         }        
     }
 }

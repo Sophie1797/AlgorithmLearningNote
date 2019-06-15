@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlgorithmNote
+namespace AlgorithmNote.Graph
 {
     /// <summary>
     /// 用邻接表实现稀疏图
