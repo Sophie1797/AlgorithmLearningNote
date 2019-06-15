@@ -32,8 +32,26 @@ namespace AlgorithmNote.Graph
                 ord[i] = -1;
             }
 
+            var queue = new Queue<int>();
             //无向图最短路径算法
-
+            queue.Enqueue(s);
+            visited[s] = true;
+            ord[s] = 0;
+            while (queue.Count != 0)
+            {
+                var v = queue.Dequeue();
+                var adjIter = G.GetAdjIterator(v);
+                foreach (int w in adjIter)
+                {
+                    if (!visited[w])
+                    {
+                        queue.Enqueue(w);
+                        visited[w] = true;
+                        @from[w] = v;
+                        ord[w] = ord[v] + 1;//注意此处要加一
+                    }
+                }
+            }
         }
 
         /// <summary>

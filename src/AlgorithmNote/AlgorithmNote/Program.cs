@@ -13,8 +13,13 @@ namespace AlgorithmNote
     {
         static void Main(string[] args)
         {
-            
-
+            string fileName = @"Graph\testG2.txt";
+            var g1 = new SparseGraph(7, false);
+            var gr1 = new ReadGraph(g1, fileName);
+            g1.Show();
+            var path = new ShortestPath(g1, 0);
+            Console.WriteLine("BFS: ");
+            path.ShowPath(6);
         }        
     }
 }
