@@ -59,6 +59,7 @@
     <Compile Include="DynamicProgramming\NumberTower.cs" />
     <Compile Include="Graph\Component.cs" />
     <Compile Include="Graph\DenseGraph.cs" />
+    <Compile Include="Graph\Edge.cs" />
     <Compile Include="Graph\GraphSearch.cs" />
     <Compile Include="Graph\IGraph.cs" />
     <Compile Include="Graph\Path.cs" />

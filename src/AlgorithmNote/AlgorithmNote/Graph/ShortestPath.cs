@@ -6,27 +6,27 @@ using System.Threading.Tasks;
 
 namespace AlgorithmNote.Graph
 {
-    public class ShortestPath
+    public class ShortestPath<TWeight> where TWeight : IComparable
     {
-        private IGraph G;
+        private IGraph<TWeight> G;
         private int s;
         private bool[] visited;
         private int[] from;
         private int[] ord;//order,记录最短距离
 
-        public ShortestPath(IGraph graph, int s)
+        public ShortestPath(IGraph<TWeight> graph, int s)
         {
             //算法初始化
             G = graph;
             this.s = s;
-            if (s < 0 || s >= G.V())
+            if (s < 0 || s >= G.V)
             {
                 throw new ArgumentException("Vertex value invalid!");
             }
-            visited = new bool[graph.V()];
-            @from = new int[graph.V()];
-            ord = new int[graph.V()];
-            for (var i = 0; i < graph.V(); i++)
+            visited = new bool[graph.V];
+            @from = new int[graph.V];
+            ord = new int[graph.V];
+            for (var i = 0; i < graph.V; i++)
             {
                 @from[i] = -1;
                 ord[i] = -1;
@@ -59,7 +59,7 @@ namespace AlgorithmNote.Graph
         /// </summary>
         public bool HasPath(int w)
         {
-            if (w < 0 || w >= G.V())
+            if (w < 0 || w >= G.V)
             {
                 throw new ArgumentException("Vertex value invalid!");
             }
@@ -72,7 +72,7 @@ namespace AlgorithmNote.Graph
         /// </summary>
         public void GetPath(int w, List<int> vec)
         {
-            if (w < 0 || w >= G.V())
+            if (w < 0 || w >= G.V)
             {
                 throw new ArgumentException("Vertex value invalid!");
             }
@@ -96,7 +96,7 @@ namespace AlgorithmNote.Graph
         /// </summary>
         public void ShowPath(int w)
         {
-            if (w < 0 || w >= G.V())
+            if (w < 0 || w >= G.V)
             {
                 throw new ArgumentException("Vertex value invalid!");
             }
@@ -121,7 +121,7 @@ namespace AlgorithmNote.Graph
         /// </summary>
         public int Length(int w)
         {
-            if (w < 0 || w >= G.V())
+            if (w < 0 || w >= G.V)
             {
                 throw new ArgumentException("Vertex value invalid!");
             }

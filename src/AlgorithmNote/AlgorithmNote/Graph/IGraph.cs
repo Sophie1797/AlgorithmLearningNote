@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace AlgorithmNote.Graph
 {
-    public interface IGraph
+    public interface IGraph<TWeight>
     {
-        void AddEdge(int v, int w);
+        int V { get; }
+        int E { get; }
+
+        void AddEdge(int v, int w, TWeight weight);
         bool HasEdge(int v, int w);
-        int V();
-        int E();
         IEnumerable GetAdjIterator(int v);
     }
 }

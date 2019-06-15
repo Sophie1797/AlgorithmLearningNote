@@ -10,11 +10,13 @@ namespace AlgorithmNote.Graph
     /// <summary>
     /// 用邻接表实现稀疏图
     /// </summary>
-    public class SparseGraph: IGraph
+    public class SparseGraph<TWeight> : IGraph<TWeight> where TWeight : IComparable
     {
-        private int n, m;//n:顶点的个数，m:边的个数
-        private bool directed;//表示这个图是有向图还是无向图
-        private List<List<int>> graph = new List<List<int>>();
+        private List<List<Edge<TWeight>>> graph = new List<List<Edge<TWeight>>>();
+
+        public int V { get; private set; }
+        public int E { get; private set; }
+        public bool Directed { get; }
 
         /// <summary>
         /// 构造函数
@@ -23,50 +25,33 @@ namespace AlgorithmNote.Graph
         /// <param name="directed">指示这个图是有向图还是无向图</param>
         public SparseGraph(int n, bool directed)
         {
-            this.n = n;
-            this.directed = directed;
+            V = n;
+            E = 0;
+            Directed = directed;
             for (var i = 0; i < n; i++)
             {
-                graph.Add(new List<int>());
+                graph.Add(new List<Edge<TWeight>>());
             }
-        }
-
-        /// <summary>
-        /// 得到图中顶点的个数
-        /// </summary>
-        /// <returns></returns>
-        public int V()
-        {
-            return n;
-        }
-
-        /// <summary>
-        /// 得到图中边的条数
-        /// </summary>
-        /// <returns></returns>
-        public int E()
-        {
-            return m;
         }
 
         /// <summary>
         /// 给图中添加一条边
         /// </summary>
-        public void AddEdge(int v, int w)
+        public void AddEdge(int v, int w, TWeight weight)
         {
-            if (v < 0 || v >= n || w < 0 || w >= n)
+            if (v < 0 || v >= V || w < 0 || w >= V)
             {
                 throw new ArgumentException("Vertex value invalid!");
             }
 
-            graph[v].Add(w);
+            graph[v].Add(new Edge<TWeight>(v, w, weight));
             //如果是自环边，而且是无向图，不需要再添加一次反向的边
-            if (v != w && !directed)
+            if (v != w && !Directed)
             {
-                graph[w].Add(v);
+                graph[w].Add(new Edge<TWeight>(v, w, weight));
             }
 
-            m++;
+            E++;
         }
 
         /// <summary>
@@ -74,14 +59,14 @@ namespace AlgorithmNote.Graph
         /// </summary>
         public bool HasEdge(int v, int w)
         {
-            if (v < 0 || v >= n || w < 0 || w >= n)
+            if (v < 0 || v >= V || w < 0 || w >= V)
             {
                 throw new ArgumentException("Vertex value invalid!");
             }
 
             for (var i = 0; i < graph[v].Count; i++)
             {
-                if (graph[v][i] == w)
+                if (graph[v][i].W == w)
                 {
                     return true;
                 }
@@ -92,12 +77,12 @@ namespace AlgorithmNote.Graph
 
         public void Show()
         {
-            for (var i = 0; i < n; i++)
+            for (var i = 0; i < V; i++)
             {
                 Console.Write($"vertex {i}:\t");
                 for (var j = 0; j < graph[i].Count; j++)
                 {
-                    Console.Write(graph[i][j] + "\t");
+                    Console.Write($"to:{graph[i][j].Other(i)},wt:{graph[i][j].Weight}\t");
                 }
                 Console.WriteLine();
             }
@@ -110,17 +95,17 @@ namespace AlgorithmNote.Graph
 
         public class AdjIterator: IEnumerable
         {
-            private SparseGraph G;
+            private SparseGraph<TWeight> G;
             private int v;
             private int index;
 
-            public AdjIterator(SparseGraph graph, int v)
+            public AdjIterator(SparseGraph<TWeight> graph, int v)
             {
                 G = graph;
                 this.v = v;
             }
 
-            public int Begin()
+            public Edge<TWeight> Begin()
             {
                 index = 0;
                 if (G.graph[v].Count != 0)
@@ -128,10 +113,10 @@ namespace AlgorithmNote.Graph
                     return G.graph[v][index];
                 }
 
-                return -1;
+                return null;
             }
 
-            public int Next()
+            public Edge<TWeight> Next()
             {
                 index++;
                 if (index < G.graph[v].Count)
@@ -139,7 +124,7 @@ namespace AlgorithmNote.Graph
                     return G.graph[v][index];
                 }
 
-                return -1;
+                return null;
             }
 
             public bool End()

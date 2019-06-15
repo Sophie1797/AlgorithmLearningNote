@@ -7,26 +7,26 @@ using System.Threading.Tasks;
 
 namespace AlgorithmNote.Graph
 {
-    public class Path
+    public class Path<TWeight> where TWeight:IComparable
     {
-        private IGraph G;
+        private IGraph<TWeight> G;
         private int s;//source节点
         private bool[] visited;//记录是否访问过
         private int[] from;//记录上一个访问的
 
-        public Path(IGraph graph, int s)
+        public Path(IGraph<TWeight> graph, int s)
         {
             // 算法初始化
             G = graph;
             this.s = s;
-            if (s < 0 || s >= G.V())
+            if (s < 0 || s >= G.V)
             {
                 throw new ArgumentException("Vertex value invalid!");
             }
 
-            visited = new bool[G.V()];
-            from = new int[G.V()];
-            for (var i = 0; i < G.V(); i++)
+            visited = new bool[G.V];
+            from = new int[G.V];
+            for (var i = 0; i < G.V; i++)
             {
                 from[i] = -1;
             }
@@ -54,7 +54,7 @@ namespace AlgorithmNote.Graph
         /// </summary>
         public bool HasPath(int w)
         {
-            if (w < 0 || w >= G.V())
+            if (w < 0 || w >= G.V)
             {
                 throw new ArgumentException("Vertex value invalid!");
             }
@@ -67,7 +67,7 @@ namespace AlgorithmNote.Graph
         /// </summary>
         public void GetPath(int w, List<int> vec)
         {
-            if (w < 0 || w >= G.V())
+            if (w < 0 || w >= G.V)
             {
                 throw new ArgumentException("Vertex value invalid!");
             }

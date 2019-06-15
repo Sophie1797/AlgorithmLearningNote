@@ -10,11 +10,13 @@ namespace AlgorithmNote.Graph
     /// <summary>
     /// 用邻接矩阵实现稠密图
     /// </summary>
-    public class DenseGraph: IGraph
+    public class DenseGraph<TWeight> : IGraph<TWeight> where TWeight : IComparable
     {
-        private int n, m;//n:顶点的个数，m:边的个数
-        private bool directed;//表示这个图是有向图还是无向图
-        private List<List<bool>> graph = new List<List<bool>>();
+        private List<List<Edge<TWeight>>> graph = new List<List<Edge<TWeight>>>();
+
+        public int V { get; private set; }
+        public int E { get; private set; }
+        public bool Directed { get; }
 
         /// <summary>
         /// 构造函数
@@ -23,56 +25,34 @@ namespace AlgorithmNote.Graph
         /// <param name="directed">指示这个图是有向图还是无向图</param>
         public DenseGraph(int n, bool directed)
         {
-            this.n = n;
-            this.directed = directed;
+            V = n;
+            E = 0;
+            Directed = directed;
             for (var i = 0; i < n; i++)
             {
-                graph.Add(new List<bool>(new bool[n]));
+                //这种写法可以在规定list长度而且后面可以直接用方括号索引
+                graph.Add(new List<Edge<TWeight>>(new Edge<TWeight>[n]));
             }
-        }
-
-        /// <summary>
-        /// 得到图中顶点的个数
-        /// </summary>
-        /// <returns></returns>
-        public int V()
-        {
-            return n;
-        }
-
-        /// <summary>
-        /// 得到图中边的条数
-        /// </summary>
-        /// <returns></returns>
-        public int E()
-        {
-            return m;
         }
 
         /// <summary>
         /// 给图中添加一条边
         /// </summary>
-        public void AddEdge(int v, int w)
+        public void AddEdge(int v, int w, TWeight weight)
         {
-            if (v < 0 || v >= n || w < 0 || w >= n)
+            if (v < 0 || v >= V || w < 0 || w >= V)
             {
                 throw new ArgumentException("Vertex value invalid!");
             }
 
-            //如果v和w已经有一条边了，就直接return
-            if (HasEdge(v, w))
-            {
-                return;
-            }
-
-            graph[v][w] = true;
+            graph[v][w] = new Edge<TWeight>(v, w, weight);
             //如果是无向图，则反向边也需要设置
-            if (!directed)
+            if (!Directed)
             {
-                graph[w][v] = true;
+                graph[w][v] = new Edge<TWeight>(w, v, weight);
             }
 
-            m++;
+            E++;
         }
 
         /// <summary>
@@ -80,22 +60,28 @@ namespace AlgorithmNote.Graph
         /// </summary>
         public bool HasEdge(int v, int w)
         {
-            if (v < 0 || v >= n || w < 0 || w >= n)
+            if (v < 0 || v >= V || w < 0 || w >= V)
             {
                 throw new ArgumentException("Vertex value invalid!");
             }
 
-            return graph[v][w];
+            return graph[v][w] != null;
         }
 
         public void Show()
         {
-            for (var i = 0; i < n; i++)
+            for (var i = 0; i < V; i++)
             {
-                for (var j = 0; j < n; j++)
+                for (var j = 0; j < V; j++)
                 {
-                    var value = graph[i][j] ? 1 : 0;
-                    Console.Write(value + "\t");
+                    if (graph[i][j] != null)
+                    {
+                        Console.Write(graph[i][j].Weight + "\t");
+                    }
+                    else
+                    {
+                        Console.Write("NULL\t");
+                    }
                 }
                 Console.WriteLine();
             }
@@ -108,48 +94,48 @@ namespace AlgorithmNote.Graph
 
         public class AdjIterator : IEnumerable
         {
-            private DenseGraph G;
+            private DenseGraph<TWeight> G;
             private int v;
             private int index;
 
-            public AdjIterator(DenseGraph graph, int v)
+            public AdjIterator(DenseGraph<TWeight> graph, int v)
             {
                 G = graph;
                 this.v = v;
                 index = -1;
             }
 
-            public int Begin()
+            public Edge<TWeight> Begin()
             {
                 index = -1;
                 return Next();
             }
 
-            public int Next()
+            public Edge<TWeight> Next()
             {
-                for (index += 1; index < G.V(); index++)
+                for (index += 1; index < G.V; index++)
                 {
-                    if (G.graph[v][index])
+                    if (G.graph[v][index] != null)
                     {
-                        return index;
+                        return G.graph[v][index];
                     }
                 }
 
-                return -1;
+                return null;
             }
 
             public bool End()
             {
-                return index >= G.V();
+                return index >= G.V;
             }
 
             public IEnumerator GetEnumerator()
             {
-                for (var i = 0; i < G.V(); i++)
+                for (var i = 0; i < G.V; i++)
                 {
-                    if (G.graph[v][i])
+                    if (G.graph[v][i] != null)
                     {
-                        yield return i;
+                        yield return G.graph[v][i];
                     }
                 }
             }

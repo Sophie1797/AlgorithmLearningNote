@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace AlgorithmNote.Graph
 {
-    public class Component
+    public class Component<TWeight> where TWeight : IComparable
     {
-        private IGraph G;
+        private IGraph<TWeight> G;
         private bool[] visited;//记录每个节点是否被访问过
         private int cCount;//记录有多少个连通分量
         private int[] id;//记录每个节点所属连通分量的编号
 
-        public Component(IGraph graph)
+        public Component(IGraph<TWeight> graph)
         {
             G = graph;
-            visited = new bool[G.V()];
-            id = new int[G.V()];
+            visited = new bool[G.V];
+            id = new int[G.V];
 
-            for (var i = 0; i < G.V(); i++)
+            for (var i = 0; i < G.V; i++)
             {
                 id[i] = -1;
             }
 
-            for (var i = 0; i < G.V(); i++)
+            for (var i = 0; i < G.V; i++)
             {
                 if (!visited[i])
                 {
@@ -55,7 +55,7 @@ namespace AlgorithmNote.Graph
 
         public bool IsConnected(int v, int w)
         {
-            if (v < 0 || v >= G.V() || w < 0 || w >= G.V())
+            if (v < 0 || v >= G.V || w < 0 || w >= G.V)
             {
                 throw new ArgumentException("Vertex value invalid!");
             }
