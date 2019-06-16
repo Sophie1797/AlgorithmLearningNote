@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AlgorithmNote.Graph
 {
-    public class Edge<TWeight> where TWeight:IComparable
+    public class Edge<TWeight>: IComparable where TWeight:IComparable
     {
         public int V { get; }
         public int W { get; }
@@ -37,9 +37,9 @@ namespace AlgorithmNote.Graph
             return V + " - " + W + ": " + Weight;
         }
 
-        public bool CompareTo(Edge<TWeight> e)
+        public int CompareTo(object e)
         {
-            return Weight.CompareTo(e.Weight) < 0;
+            return Weight.CompareTo(((Edge<TWeight>)e).Weight);
         }
     }
 }

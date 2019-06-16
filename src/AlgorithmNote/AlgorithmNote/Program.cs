@@ -17,9 +17,17 @@ namespace AlgorithmNote
             var g1 = new SparseGraph<double>(8, false);
             var gr1 = new ReadGraph<double>(g1, fileName);
             g1.Show();
-            //var path = new ShortestPath<double>(g1, 0);
-            //Console.WriteLine("BFS: ");
-            //path.ShowPath(6);
+
+            // test lazy prim
+            Console.WriteLine("Test Lazy Prim MST: ");
+            var pq = new MinHeap<Edge<double>>();
+            var lazyPrimMST = new LazyPrimMST<double>(g1, pq);
+            var mst = lazyPrimMST.MSTEdges;
+            foreach(var edge in mst)
+            {
+                Console.WriteLine(edge);
+            }
+            Console.WriteLine("The MST weight is: " + lazyPrimMST.MSTWeight);
         }        
     }
 }

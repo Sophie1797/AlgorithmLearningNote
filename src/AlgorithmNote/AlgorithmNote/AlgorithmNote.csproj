@@ -62,12 +62,14 @@
     <Compile Include="Graph\Edge.cs" />
     <Compile Include="Graph\GraphSearch.cs" />
     <Compile Include="Graph\IGraph.cs" />
+    <Compile Include="Graph\MinimumSpanTree\LazyPrimMST.cs" />
     <Compile Include="Graph\Path.cs" />
     <Compile Include="Graph\ReadGraph.cs" />
     <Compile Include="Graph\ShortestPath.cs" />
     <Compile Include="Graph\SparseGraph.cs" />
     <Compile Include="Graph\UF.cs" />
     <Compile Include="Heap\MaxHeap.cs" />
+    <Compile Include="Heap\MinHeap.cs" />
     <Compile Include="LinkedList\LinkedList.cs" />
     <Compile Include="Math\BigNumOperation.cs" />
     <Compile Include="Math\Geometry\MaxPointsInOneLine.cs" />
@@ -115,6 +117,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
