@@ -68,6 +68,7 @@
     <Compile Include="Graph\ShortestPath.cs" />
     <Compile Include="Graph\SparseGraph.cs" />
     <Compile Include="Graph\UF.cs" />
+    <Compile Include="Heap\IndexMinHeap.cs" />
     <Compile Include="Heap\MaxHeap.cs" />
     <Compile Include="Heap\MinHeap.cs" />
     <Compile Include="LinkedList\LinkedList.cs" />

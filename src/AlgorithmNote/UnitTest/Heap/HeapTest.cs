@@ -24,15 +24,16 @@ namespace UnitTest
                 arr[i] = heap.ExtractMax();
             }
 
+            var success = true;
             for (var i = 1; i < n; i++)
             {
                 if (arr[i - 1] < arr[i])
                 {
-                    throw new ArgumentException("Error");
+                    success = false;
                 }
             }
 
-            Console.WriteLine("Test Success");
+            Assert.AreEqual(true, success);
         }
 
         [TestMethod]
@@ -52,15 +53,16 @@ namespace UnitTest
                 arr[i] = heap.ExtractMin();
             }
 
+            var success = true;
             for (var i = 1; i < n; i++)
             {
                 if (arr[i - 1] > arr[i])
                 {
-                    throw new ArgumentException("Error");
+                    success = false;
                 }
             }
 
-            Console.WriteLine("Test Success");
+            Assert.AreEqual(true, success);
         }
     }
 }

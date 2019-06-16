@@ -1,12 +1,11 @@
 D:\GitRepository\AlgorithmNote\repository\AlgorithmNote\AlgorithmNote\bin\Debug\AlgorithmNote.exe.config
+D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\bin\Debug\Graph\testG2.txt
+D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\bin\Debug\Graph\testG1.txt
 D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\bin\Debug\AlgorithmNote.exe.config
 D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\bin\Debug\AlgorithmNote.exe
 D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\bin\Debug\AlgorithmNote.pdb
 D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\bin\Debug\ICSharpCode.SharpZipLib.dll
-D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\obj\Debug\AlgorithmNote.exe
-D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\obj\Debug\AlgorithmNote.pdb
-D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\bin\Debug\Graph\testG1.txt
-D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\bin\Debug\Graph\testG2.txt
-D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\obj\Debug\AlgorithmNote.csprojAssemblyReference.cache
 D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\obj\Debug\AlgorithmNote.csproj.CoreCompileInputs.cache
 D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\obj\Debug\AlgorithmNote.csproj.CopyComplete
+D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\obj\Debug\AlgorithmNote.exe
+D:\GitRepository\AlgorithmNote\repository\AlgorithmLearningNote\src\AlgorithmNote\AlgorithmNote\obj\Debug\AlgorithmNote.pdb
