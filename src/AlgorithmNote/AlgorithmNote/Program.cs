@@ -19,15 +19,14 @@ namespace AlgorithmNote
             g1.Show();
 
             // test lazy prim
-            Console.WriteLine("Test Lazy Prim MST: ");
-            var pq = new MinHeap<Edge<double>>();
-            var lazyPrimMST = new LazyPrimMST<double>(g1, pq);
-            var mst = lazyPrimMST.MSTEdges;
+            Console.WriteLine("Test Prim MST: ");
+            var primMST = new PrimMST<double>(g1);
+            var mst = primMST.MSTEdges;
             foreach(var edge in mst)
             {
                 Console.WriteLine(edge);
             }
-            Console.WriteLine("The MST weight is: " + lazyPrimMST.MSTWeight);
+            Console.WriteLine("The MST weight is: " + primMST.MSTWeight);
         }        
     }
 }

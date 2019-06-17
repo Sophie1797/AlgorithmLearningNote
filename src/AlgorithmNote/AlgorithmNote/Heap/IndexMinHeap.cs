@@ -12,7 +12,7 @@ namespace AlgorithmNote
     public class IndexMinHeap<T> where T : IComparable
     {
         private T[] data;// 最小索引堆中的数据
-        private int[] indexes;// 最小索引堆中的索引, indexes[x] = i 表示索引i在x的位置
+        private int[] indexes;// 记录数据最开始的下标，下标入堆
         private int[] reverse;// 最小索引堆中的反向索引, reverse[i] = x 表示索引i在x的位置
         private int count;// 记录索引堆中的元素个数
         private int capacity;
@@ -39,18 +39,34 @@ namespace AlgorithmNote
             return count == 0;
         }
 
-        // 向最小索引堆中插入一个新的元素, 新元素的索引为i, 元素为T
+        // 向最小索引堆中插入一个新的元素
+        public void Add(T T)
+        {
+            if (count + 1 > capacity)
+            {
+                throw new ArgumentException("Wrong argument");
+            }            
+
+            data[count + 1] = T;
+            indexes[count + 1] = count + 1;
+            reverse[count + 1] = count + 1;
+            count++;
+
+            ShiftUp(count);
+        }
+
+        // 向最小索引堆中插入一个新的元素, 新元素的索引为i, 元素为item
         // 传入的i对用户而言,是从0索引的
-        public void Insert(int i, T T)
+        public void Insert(int i, T item)
         {
             // 再插入一个新元素前,还需要保证索引i所在的位置是没有元素的。
             if (count + 1 > capacity || i + 1 < 1 || i + 1 > capacity || Contain(i))
             {
                 throw new ArgumentException("Wrong argument");
-            }            
+            }
 
             i += 1;
-            data[i] = T;
+            data[i] = item;
             indexes[count + 1] = i;
             reverse[i] = count + 1;
             count++;
@@ -83,7 +99,7 @@ namespace AlgorithmNote
                 throw new ArgumentException("Wrong count value");
             }
 
-            int ret = indexes[1] - 1;
+            int ret = indexes[1] - 1;//给用户看的下标是从0开始的
             SwapIndexes(1, count);
             reverse[indexes[count]] = 0;
             count--;

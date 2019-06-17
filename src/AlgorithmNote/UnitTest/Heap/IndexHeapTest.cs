@@ -14,7 +14,7 @@ namespace UnitTest
             Random random = new Random();
             var heap = new IndexMinHeap<int>(n);
             for (int i = 0; i < n; i++)
-                heap.Insert(i, (int)(random.Next() * n));
+                heap.Add((int)(random.Next() * n));
 
             var arr = new int[n];
             for (var i = 0; i < n; i++)

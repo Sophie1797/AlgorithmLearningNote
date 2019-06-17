@@ -63,6 +63,7 @@
     <Compile Include="Graph\GraphSearch.cs" />
     <Compile Include="Graph\IGraph.cs" />
     <Compile Include="Graph\MinimumSpanTree\LazyPrimMST.cs" />
+    <Compile Include="Graph\MinimumSpanTree\PrimMST.cs" />
     <Compile Include="Graph\Path.cs" />
     <Compile Include="Graph\ReadGraph.cs" />
     <Compile Include="Graph\ShortestPath.cs" />

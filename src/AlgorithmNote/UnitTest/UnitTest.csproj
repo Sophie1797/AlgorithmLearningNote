@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Array\ArrayListTest.cs" />
     <Compile Include="Graph\GraphTest.cs" />
+    <Compile Include="Graph\MSTTest.cs" />
     <Compile Include="Heap\IndexHeapTest.cs" />
     <Compile Include="Heap\HeapTest.cs" />
     <Compile Include="LinkedList\LinkedListTest.cs" />
