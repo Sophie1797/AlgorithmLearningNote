@@ -186,7 +186,7 @@ namespace AlgorithmNote
             while (2 * k <= count)
             {
                 int j = 2 * k;
-                if (j + 1 <= count && data[indexes[j + 1]].CompareTo(data[indexes[j]]) > 0)
+                if (j + 1 <= count && data[indexes[j + 1]].CompareTo(data[indexes[j]]) < 0)
                     j++;
 
                 if (data[indexes[k]].CompareTo(data[indexes[j]]) <= 0)
@@ -195,13 +195,6 @@ namespace AlgorithmNote
                 SwapIndexes(k, j);
                 k = j;
             }
-        }
-
-        private void Swap(T[] data, int i, int j)
-        {
-            var temp = data[i];
-            data[i] = data[j];
-            data[j] = temp;
         }
     }
 }
