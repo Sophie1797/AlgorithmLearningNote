@@ -14,7 +14,7 @@ namespace AlgorithmNote
         private T[] data;// 最小索引堆中的数据
         private int[] indexes;// 最小索引堆中的索引, indexes[x] = i 表示索引i在x的位置
         private int[] reverse;// 最小索引堆中的反向索引, reverse[i] = x 表示索引i在x的位置
-        private int count;
+        private int count;// 记录索引堆中的元素个数
         private int capacity;
 
         // 构造函数, 构造一个空堆, 可容纳capacity个元素
