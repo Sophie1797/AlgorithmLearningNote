@@ -186,7 +186,7 @@ namespace AlgorithmNote
             while (2 * k <= count)
             {
                 int j = 2 * k;
-                if (j + 1 <= count && data[indexes[j + 1]].CompareTo(data[indexes[j]]) < 0)
+                if (j + 1 <= count && data[indexes[j + 1]].CompareTo(data[indexes[j]]) > 0)
                     j++;
 
                 if (data[indexes[k]].CompareTo(data[indexes[j]]) <= 0)
