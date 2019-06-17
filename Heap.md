@@ -25,4 +25,6 @@
   删除堆中元素：先将它修改为无穷大（xiao)，然后让它上浮到堆顶，然后删除堆顶
 
 ## Implement Heap
-[Max Heap](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Heap/MaxHeap.cs)
+[MaxHeap.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Heap/MaxHeap.cs)
+[MinHeap.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Heap/MinHeap.cs)
+[IndexMinHeap.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Heap/IndexMinHeap.cs)
