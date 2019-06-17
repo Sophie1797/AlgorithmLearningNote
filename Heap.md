@@ -26,5 +26,8 @@
 
 ## Implement Heap
 [MaxHeap.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Heap/MaxHeap.cs)
+
 [MinHeap.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Heap/MinHeap.cs)
+
 [IndexMinHeap.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Heap/IndexMinHeap.cs)
+
