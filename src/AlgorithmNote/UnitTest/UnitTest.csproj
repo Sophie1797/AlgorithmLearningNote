@@ -51,6 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Array\ArrayListTest.cs" />
+    <Compile Include="Array\NumberSum\TwoSumTest.cs" />
     <Compile Include="Graph\GraphTest.cs" />
     <Compile Include="Graph\MSTTest.cs" />
     <Compile Include="Heap\IndexHeapTest.cs" />

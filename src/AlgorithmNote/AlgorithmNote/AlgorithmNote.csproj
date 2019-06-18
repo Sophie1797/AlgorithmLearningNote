@@ -48,6 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Array\ArrayList.cs" />
+    <Compile Include="Array\NumberSum\FourSum.cs" />
+    <Compile Include="Array\NumberSum\ThreeSum.cs" />
+    <Compile Include="Array\NumberSum\TwoSum.cs" />
     <Compile Include="Design\LFU.cs" />
     <Compile Include="Design\LRU.cs" />
     <Compile Include="DynamicProgramming\ClimbingStairs.cs" />
@@ -119,7 +122,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Array\Intervals\" />
+    <Folder Include="Array\MergeArray\" />
+    <Folder Include="Array\MissingItem\" />
+    <Folder Include="Array\SpiralMatrix\" />
+    <Folder Include="Array\SubArray\" />
+    <Folder Include="Array\Triangle\" />
+    <Folder Include="Backtracking\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

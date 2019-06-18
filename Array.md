@@ -2,11 +2,51 @@
 ## Implemente List in C# using array
 Source Code: [ArrayList.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Array/ArrayList.cs)
 ## Problems summary
+* **几个数的和问题**
+    * [1. 两数之和](https://leetcode-cn.com/problems/two-sum/)
+    * [167. 两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)
+    * [170. 两数之和 III - 数据结构设计](https://leetcode-cn.com/problems/two-sum-iii-data-structure-design/)
+    * [15. 三数之和](https://leetcode-cn.com/problems/3sum/)
+    * [16. 最接近的三数之和](https://leetcode-cn.com/problems/3sum-closest/)
+    * [259. 较小的三数之和](https://leetcode-cn.com/problems/3sum-smaller/)
+    * [18. 四数之和](https://leetcode-cn.com/problems/4sum/)
+    * [454. 四数相加 II](https://leetcode-cn.com/problems/4sum-ii/)
+
+* **合并数组系列**
+    * [88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)
+    * [977. 有序数组的平方](https://leetcode-cn.com/problems/squares-of-a-sorted-array/)
+    * [986. 区间列表的交集](https://leetcode-cn.com/problems/interval-list-intersections/)
+
+* **数字缺失系列**
+    * [41. 缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive/)
+    * [268. 缺失数字](https://leetcode-cn.com/problems/missing-number/)
+    * [448. 找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/)
+
+* **区间系列**
+    * [56. 合并区间](https://leetcode-cn.com/problems/merge-intervals/)
+    * [57. 插入区间](https://leetcode-cn.com/problems/insert-interval/)
+    * [252. 会议室](https://leetcode-cn.com/problems/meeting-rooms/)
+    * [253. 会议室 II](https://leetcode-cn.com/problems/meeting-rooms-ii/)
+    * [228. 汇总区间](https://leetcode-cn.com/problems/summary-ranges/)
+
 * **转圈打印矩阵相关问题**
     * [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
     * [59. Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/)
     * [885. Spiral Matrix III](https://leetcode.com/problems/spiral-matrix-iii/)
+
+* **其他矩阵计算问题**
+    * [661. 图片平滑器](https://leetcode-cn.com/problems/image-smoother/)
+    * []()
+    * []()
+    * []()
+    * []()
+    * []()
     
+* **杨辉三角系列**
+    * [118. 杨辉三角](https://leetcode-cn.com/problems/pascals-triangle/)
+    * [119. 杨辉三角 II](https://leetcode-cn.com/problems/pascals-triangle-ii/)
+
+
 * **子数组系列**
     求满足条件最长/短/个数
     * [209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
