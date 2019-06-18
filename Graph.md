@@ -64,7 +64,11 @@ Union Find implement: [UF.cs](https://github.com/Sophie1797/AlgorithmLearningNot
 一般应用：电路设计，电缆布线设计，网络设计等。
 通常是针对带全无向连通图。
 找V-1条边连通V个顶点，且权值sum最小
+
 * **切分定理（Cut Property)**
+
 把图中的节点分成两部分，称为一个**切分（Cut）**。
+
 如果一个边的两个端点，属于切分（Cut）不同的两边，这个边称为**横切边（Crossing Edge）**。
+
 **切分定理**：给定**任意**切分，横切边中权值最小的边必然属于最小生成树。
