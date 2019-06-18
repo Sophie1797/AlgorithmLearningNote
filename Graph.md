@@ -58,6 +58,20 @@ Topological sort source code:
 ## Union Find
 Union Find implement: [UF.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Graph/UF.cs)
 
+维护一个森林，每一棵树代表一个集合，树根元素为这个集合的代表元。
+
+并查集支持两种**操作**：
+* **合并两个集合** 均摊O(1)
+   合并两个集合时，先找到两个集合的代表元x,y，然后令father[x]=y即可
+* **查询一个元素所处的集合** 均摊O(1)
+   利用father[]数组记录每个元素的父亲节点，只要不断寻找父亲节点，即可找到该元素所处的集合的代表元。
+
+并查集有两种**优化**：
+* **路径压缩**
+   即在沿着树根的路径找到元素a所在集合的代表元b之后，对这条路径上所有的元素x（包括a），直接令father[x]=b
+* **按照rank启发式合并**
+   对于每一个集合，维护一个rank值，每次将rank较小的集合合并到rank较大的集合上，合并时rank = rank+1
+
 ## 最短路径
 
 ## 最小生成树
