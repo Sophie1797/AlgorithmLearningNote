@@ -67,8 +67,8 @@ Union Find implement: [UF.cs](https://github.com/Sophie1797/AlgorithmLearningNot
 
 * **切分定理（Cut Property)**
 
-把图中的节点分成两部分，称为一个**切分（Cut）**。
+   把图中的节点分成两部分，称为一个**切分（Cut）**。
 
-如果一个边的两个端点，属于切分（Cut）不同的两边，这个边称为**横切边（Crossing Edge）**。
+   如果一个边的两个端点，属于切分（Cut）不同的两边，这个边称为**横切边（Crossing Edge）**。
 
-**切分定理**：给定**任意**切分，横切边中权值最小的边必然属于最小生成树。
+   **切分定理**：给定**任意**切分，横切边中权值最小的边必然属于最小生成树。
