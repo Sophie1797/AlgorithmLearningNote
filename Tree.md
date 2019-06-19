@@ -119,6 +119,15 @@
 
 ## Banlanced Tree
 ### Implement AVL
+[AVL.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Tree/AVL.cs)
 
 ## Segment Tree
+[SegmentTree.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Tree/SegmentTree.cs)
 
+## B Tree
+B树是对二叉查找树的**改进**。它的**设计思想**是，将相关数据尽量集中在一起，以便一次读取多个数据，减少硬盘操作次数。
+
+B树的三个**特点**:
+* 一个节点可以容纳多个值。比如上图中，最多的一个节点容纳了4个值。
+* 除非数据已经填满，否则不会增加新的层。也就是说，B树追求"层"越少越好。
+* 子节点中的值，与父节点中的值，有严格的大小对应关系。一般来说，如果父节点有a个值，那么就有a+1个子节点。
