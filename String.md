@@ -1,4 +1,5 @@
 #String
+"前缀"指除了最后一个字符以外，一个字符串的全部头部组合；"后缀"指除了第一个字符以外，一个字符串的全部尾部组合。
 ## KMP
 [KMP.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/String/KMP.cs)
 
