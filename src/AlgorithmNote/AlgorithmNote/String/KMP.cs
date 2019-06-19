@@ -4,51 +4,66 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StringBase
+namespace AlgorithmNote
 {
     public class KMP
     {
         public int[] GetNextArr(string s)
         {
+            // 每次求出next[i]时，总是让j指向next[i]
             int j = -1;
             int n = s.Length;
+            // next[i]表示使子串s[0..i]的前缀s[0..k]等于后缀s[i-k..i]的最大的k
             int[] next = new int[n];
+            // i为0的话，next[i]肯定是-1
             next[0] = -1;
+            // i表示以i为结尾
             for(var i = 1; i < n; i++)
             {
                 while (j != -1 && s[i] != s[j + 1])
                 {
                     j = next[j];
                 }
-                if (s[i] == s[j + 1]) j++;
+
+                if (s[i] == s[j + 1])
+                {
+                    j++;
+                }
+
                 next[i] = j;
             }
             return next;
         }
 
-        public int[] GetNextArrModified(string s)
+        public int[] GetNextValArr(string s)
         {
             int j = -1;
             int n = s.Length;
-            int[] next = new int[n];
-            next[0] = -1;
+            // nextval的含义应该理解为当模式串pattern的i+1位失配时，i应当回退到的最佳位置
+            int[] nextval = new int[n];
+            nextval[0] = -1;
             for (var i = 1; i < n; i++)
             {
                 while (j != -1 && s[i] != s[j + 1])
                 {
-                    j = next[j];
+                    j = nextval[j];
                 }
-                if (s[i] == s[j + 1]) j++;
+
+                if (s[i] == s[j + 1])
+                {
+                    j++;
+                }
+
                 if (j != -1 && s[i + 1] == s[j + 1])//优化部分: 从上到下分析，从下到上写代码，动归
                 {
-                    next[i] = next[j];
+                    nextval[i] = nextval[j];
                 }
                 else//优化部分--end
                 {
-                    next[i] = j;
+                    nextval[i] = j;
                 }
             }
-            return next;
+            return nextval;
         }
 
         public bool IsMatch(string s, string p)

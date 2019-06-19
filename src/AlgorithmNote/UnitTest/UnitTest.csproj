@@ -63,6 +63,7 @@
     <Compile Include="Sort\BubbleSortTest.cs" />
     <Compile Include="Sort\SortBaseTest.cs" />
     <Compile Include="Stack\StackTest.cs" />
+    <Compile Include="String\KMPTest.cs" />
     <Compile Include="Tree\TreeTest.cs" />
   </ItemGroup>
   <ItemGroup>
