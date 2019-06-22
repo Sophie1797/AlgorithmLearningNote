@@ -1,17 +1,17 @@
 # Search
 ## Binary Searh
-* Search in 1D sorted array
+* Search in 1D sorted array。代码：[BinarySearchBasic.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Search/BinarySearch1D/BinarySearchBasic.cs)
     一般有以下几类：
     1. 找第一个满足条件的
     2. 找最后一个满足条件的
     3. 找恰好满足条件的
     [704. Binary Search](https://leetcode.com/problems/binary-search/)
-* Search in rotate sorted array
+* Search in rotate sorted array。代码：[BinarySearchOfRotateArray.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Search/BinarySearch1D/BinarySearchOfRotateArray.cs)
     * [153. 寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)
     * [154. 寻找旋转排序数组中的最小值 II](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)
     * [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
     * [81. 搜索旋转排序数组 II](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/)
-* Search in 2D sorted array
+* Search in 2D sorted array。代码：[BinarySearch2D.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Search/BinarySearch2D.cs)
     一般分类：
     1. 保证每一行的上一行最后一个元素小/大于当前行第一个元素
     [74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)

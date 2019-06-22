@@ -29,16 +29,16 @@ Use LinkedList: [LinkedListStack.cs](https://github.com/Sophie1797/AlgorithmLear
     * [1047. Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/)
 * **Next Greater Element**
     这类题一般可以转化为，求数组中每一个数右边比自己大的数字，思路为：遍历数组，栈中放的数字是还没有找到比自己大的数字的数字的下标，如果当前遍历到的数字大于栈顶所代表的数，那么栈顶所代表的数对应的答案就是当前遍历到的这个数字，然后就可以弹出了，所以栈中始种保持空或者金字塔一样的结构（栈从顶到底元素所代表的数字值递增）
-    同理，栈中元素也可以一直保持从顶到低递减，用来求右边第一个比自己小的数字
+    同理，栈中元素也可以一直保持从顶到低递减，用来求右边第一个比自己小的数字, Code: [OrderedStack.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Stack/OrderedStack.cs)
     * [496. Next Greater Element I](https://leetcode.com/problems/next-greater-element-i/)
     * [503. Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii/)
     * [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
     * [901. Online Stock Span](https://leetcode.com/problems/online-stock-span/)
     * [1019. Next Greater Node In Linked List](https://leetcode.com/problems/next-greater-node-in-linked-list/)
 * **Design Stack**
-    * [155. Min Stack](https://leetcode.com/problems/min-stack/)
+    * [155. Min Stack](https://leetcode.com/problems/min-stack/), Code: [MinStack.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Stack/MinStack.cs)
     * [225. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)
     * [232. Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
-    * [895. Maximum Frequency Stack](https://leetcode.com/problems/maximum-frequency-stack/)
+    * [895. Maximum Frequency Stack](https://leetcode.com/problems/maximum-frequency-stack/), Code: [FreqStack.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Stack/FreqStack.cs)
 * **Parse**
     * [385. Mini Parser](https://leetcode.com/problems/mini-parser/)

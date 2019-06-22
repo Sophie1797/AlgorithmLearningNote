@@ -60,6 +60,7 @@
     <Compile Include="DynamicProgramming\LIS.cs" />
     <Compile Include="DynamicProgramming\LPS.cs" />
     <Compile Include="DynamicProgramming\NumberTower.cs" />
+    <Compile Include="Graph\Bipartition\Bipartition.cs" />
     <Compile Include="Graph\Component.cs" />
     <Compile Include="Graph\DenseGraph.cs" />
     <Compile Include="Graph\Edge.cs" />

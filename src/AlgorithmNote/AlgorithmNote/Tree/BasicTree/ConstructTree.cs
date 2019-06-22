@@ -129,7 +129,7 @@ namespace AlgorithmNote.Tree.BasicTree
 
             private TreeNode helper(int[] postorder, int[] inorder, int left, int right)
             {
-                if (left == right || offset < 0)
+                if (left == right)
                     return null;
                 var rootVal = postorder[offset];
                 var root = new TreeNode(rootVal);
@@ -148,7 +148,7 @@ namespace AlgorithmNote.Tree.BasicTree
         /// <summary>
         /// 1008. 先序遍历构造二叉树
         /// </summary>
-        public class Solution
+        public class ConstructBstFromPreorder
         {
             public TreeNode BstFromPreorder(int[] preorder)
             {
@@ -192,6 +192,27 @@ namespace AlgorithmNote.Tree.BasicTree
                 {
                     return hi + 1;
                 }
+            }
+        }
+
+        /// <summary>
+        /// 108. Convert Sorted Array to Binary Search Tree
+        /// </summary>
+        public class ConvertSortedArrayToBST
+        {
+            public TreeNode SortedArrayToBST(int[] nums)
+            {
+                return ToBST(nums, 0, nums.Length - 1);
+            }
+
+            public TreeNode ToBST(int[] nums, int start, int end)
+            {
+                if (start > end) return null;
+                var mid = (start + end) / 2;
+                var root = new TreeNode(nums[mid]);
+                root.left = ToBST(nums, start, mid - 1);
+                root.right = ToBST(nums, mid + 1, end);
+                return root;
             }
         }
     }

@@ -48,6 +48,11 @@
 有向图G=(V,E)的强连通分量是一个最大结点集合C⊆V，对于该集合中的任意一对结点u和v来说，路径u→v和路径v→u同时存在；也就是说，结点u和结点v相互可达。
 
 ## Traversal Graph
+### Bipartition graph
+ 判断一个图是否可以二分，可以用DFS顺便染色来完成。
+ * [785. 判断二分图](https://leetcode-cn.com/problems/is-graph-bipartite/)
+ * [886. 可能的二分法](https://leetcode-cn.com/problems/possible-bipartition/)
+
 ### Topological Sort
 Actually, topological is the result of DFS.
 Topological sort source code:

@@ -26,6 +26,7 @@
     * [889. Construct Binary Tree from Preorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/)
     * [1008. Construct Binary Search Tree from Preorder Traversal](https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/)
     * [108. Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
+    上面几道题的代码：[ConstructTree.cs](https://github.com/Sophie1797/AlgorithmLearningNote/blob/master/src/AlgorithmNote/AlgorithmNote/Tree/BasicTree/ConstructTree.cs) , Blog: [Blog](https://blog.csdn.net/m0_37981481/article/details/93251974)
     * [1028. Recover a Tree From Preorder Traversal](https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/)
     * [99. Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/)
     * [538. Convert BST to Greater Tree](https://leetcode.com/problems/convert-bst-to-greater-tree/)
