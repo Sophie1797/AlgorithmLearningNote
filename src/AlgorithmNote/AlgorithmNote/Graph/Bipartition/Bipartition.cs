@@ -57,6 +57,7 @@ namespace AlgorithmNote.Graph
 
             foreach (int[] edge in dislikes)
             {
+                // 注意在构造邻接表的时候，两个方向的边都要添加一下
                 graph[edge[0]].Add(edge[1]);
                 graph[edge[1]].Add(edge[0]);
             }

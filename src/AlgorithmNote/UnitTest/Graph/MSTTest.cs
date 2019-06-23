@@ -31,7 +31,20 @@ namespace UnitTest
 
         public void TestPrimMST()
         {
+            string fileName = @"Graph\testG1.txt";
+            var g1 = new SparseGraph<double>(8, false);
+            var gr1 = new ReadGraph<double>(g1, fileName);
+            g1.Show();
 
+            // test prim
+            Console.WriteLine("Test Prim MST: ");
+            var primMST = new PrimMST<double>(g1);
+            var mst = primMST.MSTEdges;
+            foreach (var edge in mst)
+            {
+                Console.WriteLine(edge);
+            }
+            Console.WriteLine("The MST weight is: " + primMST.MSTWeight);
         }
     }
 }

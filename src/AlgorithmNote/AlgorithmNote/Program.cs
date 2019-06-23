@@ -18,15 +18,15 @@ namespace AlgorithmNote
             var gr1 = new ReadGraph<double>(g1, fileName);
             g1.Show();
 
-            // test lazy prim
-            Console.WriteLine("Test Prim MST: ");
-            var primMST = new PrimMST<double>(g1);
-            var mst = primMST.MSTEdges;
+            // test Kruskal
+            Console.WriteLine("Test Kruskal: ");
+            var kruskalMST = new KruskalMST<double>(g1);
+            var mst = kruskalMST.MSTEdges;
             foreach(var edge in mst)
             {
                 Console.WriteLine(edge);
             }
-            Console.WriteLine("The MST weight is: " + primMST.MSTWeight);
+            Console.WriteLine("The MST weight is: " + kruskalMST.MSTWeight);
         }        
     }
 }
