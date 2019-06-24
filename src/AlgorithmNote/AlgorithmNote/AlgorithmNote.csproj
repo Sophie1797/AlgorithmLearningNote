@@ -109,6 +109,7 @@
     <Compile Include="Stack\MinStack.cs" />
     <Compile Include="Stack\OrderedStack.cs" />
     <Compile Include="String\KMP.cs" />
+    <Compile Include="String\ReverseString.cs" />
     <Compile Include="Tree\AVL.cs" />
     <Compile Include="Tree\BasicTree\ConstructTree.cs" />
     <Compile Include="Tree\BasicTree\TreeNode.cs" />

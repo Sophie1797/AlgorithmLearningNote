@@ -16,7 +16,12 @@
 * Reverse string
   * [344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/)
   * [541. 反转字符串 II](https://leetcode-cn.com/problems/reverse-string-ii/)
+
+  * [151. 翻转字符串里的单词](https://leetcode-cn.com/problems/reverse-words-in-a-string/)
+  * [186. 翻转字符串里的单词 II](https://leetcode-cn.com/problems/reverse-words-in-a-string-ii/)
   * [557. 反转字符串中的单词 III](https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/)
-  * []()
+
+* 字符串匹配
+  * [28. 实现strStr()](https://leetcode-cn.com/problems/implement-strstr/)
   * []()
   * []()
