@@ -85,7 +85,38 @@ Union Find implement: [UF.cs](https://github.com/Sophie1797/AlgorithmLearningNot
 
    对于每一个集合，维护一个rank值，每次将rank较小的集合合并到rank较大的集合上，合并时rank = rank+1
 
+### Problems Summary
+* 求集合个数。也就是求连通图个数，在uf中keep一个count变量，每union一对儿节点，count--，这个count就是最后的连通图个数。
+   * [547. 朋友圈](https://leetcode-cn.com/problems/friend-circles/)
+   * [200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)
+   * [323. 无向图中连通分量的数目](https://leetcode-cn.com/problems/number-of-connected-components-in-an-undirected-graph/)
+   * []()
+   * []()
+* 查找冗余边
+   * [684. 冗余连接](https://leetcode-cn.com/problems/redundant-connection/submissions/)
+   * []()
+   * []()
+   * []()
+   * []()
+   * []()
+   * []()
+   * []()
+   * []()
+   * []()
+   * []()
+   * []()
+   * []()
+   * []()
+
+
 ## 最短路径
+核心操作——**松弛操作**：从某个节点绕一下路看看会不会是更短的路径。
+
+### 单源最短路径
+* **dijkstra算法**
+   前提：图中不能有负权边
+
+   复杂度：O(Elog(v))
 
 ## 最小生成树
 一般应用：电路设计，电缆布线设计，网络设计等。
@@ -99,3 +130,10 @@ Union Find implement: [UF.cs](https://github.com/Sophie1797/AlgorithmLearningNot
    如果一个边的两个端点，属于切分（Cut）不同的两边，这个边称为**横切边（Crossing Edge）**。
 
    **切分定理**：给定**任意**切分，横切边中权值最小的边必然属于最小生成树。
+
+* **Lazy Prim**
+
+* **Prim**
+
+* **Kruskal**
+   把所有边排序，从小到大，依此尝试加入MST，如果不构成环，就是MST的一条边，判断是否成环的逻辑用并查集实现。

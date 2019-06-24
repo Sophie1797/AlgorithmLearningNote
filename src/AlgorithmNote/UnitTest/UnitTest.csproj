@@ -54,6 +54,7 @@
     <Compile Include="Array\NumberSum\TwoSumTest.cs" />
     <Compile Include="Graph\GraphTest.cs" />
     <Compile Include="Graph\MSTTest.cs" />
+    <Compile Include="Graph\UFTest.cs" />
     <Compile Include="Heap\IndexHeapTest.cs" />
     <Compile Include="Heap\HeapTest.cs" />
     <Compile Include="LinkedList\LinkedListTest.cs" />

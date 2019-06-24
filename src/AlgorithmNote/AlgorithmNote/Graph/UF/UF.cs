@@ -11,6 +11,8 @@ namespace AlgorithmNote.Graph
         private int[] parent;
         private int[] rank;
 
+        public int Count { get; private set; }
+
         public UnionFind(int size)
         {
             parent = new int[size];
@@ -20,6 +22,7 @@ namespace AlgorithmNote.Graph
                 parent[i] = i;
                 rank[i] = 1;
             }
+            Count = size;
         }
 
         public int GetSize()
@@ -81,6 +84,8 @@ namespace AlgorithmNote.Graph
                     rank[pRoot]++;
                 }
             }
+
+            Count--;
         }
     }
 

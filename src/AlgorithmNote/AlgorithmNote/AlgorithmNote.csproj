@@ -72,8 +72,10 @@
     <Compile Include="Graph\Path.cs" />
     <Compile Include="Graph\ReadGraph.cs" />
     <Compile Include="Graph\ShortestPath.cs" />
+    <Compile Include="Graph\ShortestPath\Dijkstra.cs" />
     <Compile Include="Graph\SparseGraph.cs" />
-    <Compile Include="Graph\UF.cs" />
+    <Compile Include="Graph\UF\UF.cs" />
+    <Compile Include="Graph\UF\SetCount.cs" />
     <Compile Include="Heap\IndexMinHeap.cs" />
     <Compile Include="Heap\IndexMinHeap_List.cs" />
     <Compile Include="Heap\MaxHeap.cs" />
