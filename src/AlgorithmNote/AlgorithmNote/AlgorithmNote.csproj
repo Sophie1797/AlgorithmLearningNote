@@ -48,9 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Array\ArrayList.cs" />
+    <Compile Include="Array\KthLargest\KthLargest.cs" />
+    <Compile Include="Array\MergeArray\MergeArray.cs" />
     <Compile Include="Array\NumberSum\FourSum.cs" />
     <Compile Include="Array\NumberSum\ThreeSum.cs" />
     <Compile Include="Array\NumberSum\TwoSum.cs" />
+    <Compile Include="Array\RemoveElement\RemoveElement.cs" />
     <Compile Include="Design\LFU.cs" />
     <Compile Include="Design\LRU.cs" />
     <Compile Include="DynamicProgramming\ClimbingStairs.cs" />
@@ -132,7 +135,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Array\Intervals\" />
-    <Folder Include="Array\MergeArray\" />
     <Folder Include="Array\MissingItem\" />
     <Folder Include="Array\SpiralMatrix\" />
     <Folder Include="Array\SubArray\" />

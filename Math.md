@@ -30,6 +30,7 @@
     * [671. 二叉树中第二小的节点](https://leetcode-cn.com/problems/second-minimum-node-in-a-binary-tree/)
     * [668. 乘法表中第k小的数](https://leetcode-cn.com/problems/kth-smallest-number-in-multiplication-table/)
     * [719. 找出第 k 小的距离对](https://leetcode-cn.com/problems/find-k-th-smallest-pair-distance/)
+    * [973. 最接近原点的 K 个点](https://leetcode-cn.com/problems/k-closest-points-to-origin/)
     * [440. 字典序的第K小数字](https://leetcode-cn.com/problems/k-th-smallest-in-lexicographical-order/)
     * [786. 第 K 个最小的素数分数](https://leetcode-cn.com/problems/k-th-smallest-prime-fraction/)
 
@@ -37,6 +38,8 @@
     * [703. 数据流中的第K大元素](https://leetcode-cn.com/problems/kth-largest-element-in-a-stream/)
     * [215. 数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)
     * [414. 第三大的数](https://leetcode-cn.com/problems/third-maximum-number/)
+    * [347. 前K个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements/)
+    * [692. 前K个高频单词](https://leetcode-cn.com/problems/top-k-frequent-words/)
 
 * **平均数**
     * [346. 数据流中的移动平均值](https://leetcode-cn.com/problems/moving-average-from-data-stream/)
