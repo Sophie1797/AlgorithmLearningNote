@@ -113,12 +113,15 @@
     <Compile Include="Stack\OrderedStack.cs" />
     <Compile Include="String\KMP.cs" />
     <Compile Include="String\ReverseString.cs" />
+    <Compile Include="String\Trie\DictionaryTrie.cs" />
+    <Compile Include="String\Trie\MapSum.cs" />
+    <Compile Include="String\Trie\TrieAndDFS.cs" />
     <Compile Include="Tree\AVL.cs" />
     <Compile Include="Tree\BasicTree\ConstructTree.cs" />
     <Compile Include="Tree\BasicTree\TreeNode.cs" />
     <Compile Include="Tree\BST.cs" />
     <Compile Include="Tree\SegmentTree.cs" />
-    <Compile Include="Tree\Trie\Trie.cs" />
+    <Compile Include="String\Trie\ArrayTrie.cs" />
     <Compile Include="TwoPointers\TrapWater.cs" />
   </ItemGroup>
   <ItemGroup>

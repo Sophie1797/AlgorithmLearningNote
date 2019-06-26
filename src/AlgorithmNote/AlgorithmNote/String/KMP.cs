@@ -8,62 +8,46 @@ namespace AlgorithmNote
 {
     public class KMP
     {
-        public int[] GetNextArr(string s)
+        /// <summary>
+        /// 28. 实现strStr()
+        /// 在c#里面应该对应的是IndexOf()
+        /// </summary>
+        /// <param name="S">给定s</param>
+        /// <param name="T">pattern</param>
+        /// <returns>匹配的下标</returns>
+        public int StrStr(string S, string T)
         {
-            // 每次求出next[i]时，总是让j指向next[i]
-            int j = -1;
-            int n = s.Length;
-            // next[i]表示使子串s[0..i]的前缀s[0..k]等于后缀s[i-k..i]的最大的k
-            int[] next = new int[n];
-            // i为0的话，next[i]肯定是-1
-            next[0] = -1;
-            // i表示以i为结尾
-            for(var i = 1; i < n; i++)
+            if (string.IsNullOrEmpty(T)) return 0;
+            var next = GetNext(T);
+            var i = 0; var j = 0;
+            while (i < S.Length && j < T.Length)
             {
-                while (j != -1 && s[i] != s[j + 1])
+                if (j == -1 || S[i] == T[j])
                 {
-                    j = next[j];
+                    i++; j++;
                 }
-
-                if (s[i] == s[j + 1])
-                {
-                    j++;
-                }
-
-                next[i] = j;
+                else j = next[j];
             }
-            return next;
+            if (j == T.Length) return i - j;
+            return -1;
         }
 
-        public int[] GetNextValArr(string s)
+        private int[] GetNext(string t)
         {
-            int j = -1;
-            int n = s.Length;
-            // nextval的含义应该理解为当模式串pattern的i+1位失配时，i应当回退到的最佳位置
-            int[] nextval = new int[n];
-            nextval[0] = -1;
-            for (var i = 1; i < n; i++)
+            var next = new int[t.Length];
+            next[0] = -1;
+            var i = 0; var j = -1;
+            while (i < t.Length - 1)
             {
-                while (j != -1 && s[i] != s[j + 1])
+                if (j == -1 || t[i] == t[j])
                 {
-                    j = nextval[j];
+                    i++; j++;
+                    next[i] = j;
                 }
-
-                if (s[i] == s[j + 1])
-                {
-                    j++;
-                }
-
-                if (j != -1 && s[i + 1] == s[j + 1])//优化部分: 从上到下分析，从下到上写代码，动归
-                {
-                    nextval[i] = nextval[j];
-                }
-                else//优化部分--end
-                {
-                    nextval[i] = j;
-                }
+                else j = next[j];
             }
-            return nextval;
+
+            return next;
         }
 
         public bool IsMatch(string s, string p)
