@@ -54,6 +54,7 @@
     <Compile Include="Array\NumberSum\ThreeSum.cs" />
     <Compile Include="Array\NumberSum\TwoSum.cs" />
     <Compile Include="Array\RemoveElement\RemoveElement.cs" />
+    <Compile Include="Design\AllO1.cs" />
     <Compile Include="Design\LFU.cs" />
     <Compile Include="Design\LRU.cs" />
     <Compile Include="DynamicProgramming\ClimbingStairs.cs" />
