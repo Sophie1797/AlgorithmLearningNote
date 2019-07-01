@@ -12,9 +12,8 @@ namespace Cache
     public class LFUCache
     {
         public int Cap;
-        public LinkedList<LFUNode> lru = new LinkedList<LFUNode>();
+        public LinkedList<LFUNode> lfu = new LinkedList<LFUNode>();
         public Dictionary<int, LinkedListNode<LFUNode>> map = new Dictionary<int, LinkedListNode<LFUNode>>();
-        public Dictionary<int, int> frequent = new Dictionary<int, int>();
 
         public LFUCache(int capacity)
         {
@@ -36,7 +35,6 @@ namespace Cache
 
         public void Put(int key, int value)
         {
-            //Console.WriteLine(key);
             //1.如果key位置有值就把原值覆盖了然后调整到列表头
             LinkedListNode<LFUNode> node;
             if (map.TryGetValue(key, out node))
@@ -49,13 +47,13 @@ namespace Cache
             if (Cap == map.Count)
             {
                 if (Cap == 0) return;
-                var tail = lru.Last;
+                var tail = lfu.Last;
                 map.Remove(tail.Value.Key);
-                lru.RemoveLast();
+                lfu.RemoveLast();
             }
-            //3.直接插入到列表last,then update
+            //3.直接插入到列表last, then update, add to map also
             node = new LinkedListNode<LFUNode>(new LFUNode(key, value, 1));
-            lru.AddLast(node);
+            lfu.AddLast(node);
             UpdateOrder(node);
             map.Add(key, node);
         }
@@ -67,33 +65,39 @@ namespace Cache
             {
                 return;
             }
-            lru.Remove(node);
+
+            // 1. remove node from current place
+            lfu.Remove(node);
+
+            // 2. find the last previous node which is more frequent
             while (pre != null && node.Value.Count >= pre.Value.Count)
             {
                 pre = pre.Previous;
             }
+
+            // 3. Add node after this previous node
             if (pre == null)
             {
-                lru.AddFirst(node);
+                lfu.AddFirst(node);
             }
             else
             {
-                lru.AddAfter(pre, node);
+                lfu.AddAfter(pre, node);
             }
         }
-    }
 
-    public class LFUNode
-    {
-        public int Key { get; set; }
-        public int Value { get; set; }
-        public int Count { get; set; }
-
-        public LFUNode(int k, int v, int c)
+        public class LFUNode
         {
-            Key = k;
-            Value = v;
-            Count = c;
+            public int Key { get; set; }
+            public int Value { get; set; }
+            public int Count { get; set; }
+
+            public LFUNode(int k, int v, int c)
+            {
+                Key = k;
+                Value = v;
+                Count = c;
+            }
         }
     }
 }
