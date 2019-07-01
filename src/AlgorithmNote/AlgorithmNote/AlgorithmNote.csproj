@@ -78,6 +78,8 @@
     <Compile Include="Graph\ShortestPath.cs" />
     <Compile Include="Graph\ShortestPath\Dijkstra.cs" />
     <Compile Include="Graph\SparseGraph.cs" />
+    <Compile Include="Graph\TopologicalSort\CourceSchedule.cs" />
+    <Compile Include="Graph\TopologicalSort\LongestSeqInMatrix.cs" />
     <Compile Include="Graph\UF\UF.cs" />
     <Compile Include="Graph\UF\SetCount.cs" />
     <Compile Include="Heap\IndexMinHeap.cs" />

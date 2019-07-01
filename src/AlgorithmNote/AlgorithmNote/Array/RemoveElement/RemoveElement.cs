@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlgorithmNote.Array.RemoveElement
+namespace AlgorithmNote
 {
     public class RemoveElements
     {
