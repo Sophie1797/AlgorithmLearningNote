@@ -90,23 +90,10 @@ Union Find implement: [UF.cs](https://github.com/Sophie1797/AlgorithmLearningNot
    * [547. 朋友圈](https://leetcode-cn.com/problems/friend-circles/)
    * [200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)
    * [323. 无向图中连通分量的数目](https://leetcode-cn.com/problems/number-of-connected-components-in-an-undirected-graph/)
-   * []()
-   * []()
+
 * 查找冗余边
    * [684. 冗余连接](https://leetcode-cn.com/problems/redundant-connection/submissions/)
-   * []()
-   * []()
-   * []()
-   * []()
-   * []()
-   * []()
-   * []()
-   * []()
-   * []()
-   * []()
-   * []()
-   * []()
-   * []()
+
 
 
 ## 最短路径
