@@ -225,33 +225,48 @@ namespace AlgorithmNote
         /// <returns></returns>
         public int CoinChange(int[] coins, int amount)
         {
-            int max = amount + 1;
-            var cache = new int[amount + 1];
-            //面额为0的硬币无论怎么组合都得不到一个合适的value，所以设为max
-            for (var i = 0; i < cache.Length; i++)
+            var dp = new int[amount + 1];
+            for (var i = 0; i < amount + 1; i++)
             {
-                cache[i] = max;
+                dp[i] = int.MaxValue;
             }
-            cache[0] = 0;
-
-            for (int i = 1; i <= amount; i++)
+            dp[0] = 0;//恰好一个面值等于amount的情况要用
+            for (var i = 0; i < coins.Length; i++)
             {
-                for (int j = 0; j < coins.Length; j++)
+                for (var j = coins[i]; j < amount + 1; j++)
                 {
-                    if (coins[j] <= i)
+                    if (dp[j - coins[i]] != int.MaxValue)
                     {
-                        //注意此处加的是1
-                        cache[i] = Math.Min(cache[i], cache[i - coins[j]] + 1);
+                        dp[j] = Math.Min(dp[j], dp[j - coins[i]] + 1);
                     }
                 }
             }
+            return dp[amount] == int.MaxValue ? -1 : dp[amount];
+        }
 
-            return cache[amount] > amount ? -1 : cache[amount];
+        /// <summary>
+        /// 518. Coin Change II https://leetcode-cn.com/problems/coin-change-2/submissions/
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <param name="coins"></param>
+        /// <returns></returns>
+        public int Change(int amount, int[] coins)
+        {
+            var dp = new int[amount + 1];
+            dp[0] = 1;
+            for (int i = 0; i < coins.Length; i++)
+            {
+                for (int j = coins[i]; j <= amount; j++)
+                {
+                    dp[j] += dp[j - coins[i]];
+                }
+            }
+            return dp[amount];
         }
 
         /// <summary>
         /// 377. Combination Sum IV https://leetcode.com/problems/combination-sum-iv/, google, facebook
-        /// 类似完全背包问题
+        /// 类似上一题，但这道题不同顺序算作不同的组合
         /// </summary>
         /// <param name="nums"></param>
         /// <param name="target"></param>
