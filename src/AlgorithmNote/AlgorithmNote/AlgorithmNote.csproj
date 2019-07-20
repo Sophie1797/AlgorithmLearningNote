@@ -54,6 +54,8 @@
     <Compile Include="Array\NumberSum\ThreeSum.cs" />
     <Compile Include="Array\NumberSum\TwoSum.cs" />
     <Compile Include="Array\RemoveElement\RemoveElement.cs" />
+    <Compile Include="Array\SubArray\SubArrayProduct.cs" />
+    <Compile Include="Array\SubArray\SubArraySum.cs" />
     <Compile Include="Design\AllO1.cs" />
     <Compile Include="Design\LFU.cs" />
     <Compile Include="Design\LRU.cs" />
@@ -64,6 +66,7 @@
     <Compile Include="DynamicProgramming\LIS.cs" />
     <Compile Include="DynamicProgramming\LPS.cs" />
     <Compile Include="DynamicProgramming\NumberTower.cs" />
+    <Compile Include="DynamicProgramming\SellStock.cs" />
     <Compile Include="Graph\Bipartition\Bipartition.cs" />
     <Compile Include="Graph\Component.cs" />
     <Compile Include="Graph\DenseGraph.cs" />
@@ -143,7 +146,6 @@
     <Folder Include="Array\Intervals\" />
     <Folder Include="Array\MissingItem\" />
     <Folder Include="Array\SpiralMatrix\" />
-    <Folder Include="Array\SubArray\" />
     <Folder Include="Array\Triangle\" />
     <Folder Include="Backtracking\" />
   </ItemGroup>

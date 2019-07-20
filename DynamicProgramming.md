@@ -14,6 +14,8 @@
     $$ dp[i] = max\{A[i], dp[i-1]+A[i]\} $$
     边界
     $$ dp[0]=A[0] $$
+    leetcode中类似题目：
+    * [53. Maximum Subarray](https://leetcode-cn.com/problems/maximum-subarray/)
 * **最长不下降子序列（LIS）**
 	$dp[i]$表示以$A[i]$结尾的最长不下降子序列长度
     $$ dp[i] = max\{1, dp[j]+1\},\ (j=1,2,...,i-1 and A[j]<A[i]) $$
@@ -47,6 +49,7 @@
     $$
     边界
     $$dp[i][i]=0,\ dp[i][i+1]=(S[i]==S[i+1]?1:0)$$
+    leetcode中类似题目：
     * [516. Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)
 * **数塔DP**
 	$dp[i][j]$表示从第$i$行第$j$个数字出发的到达最底层的所有路径上所能得到的最大和，$f$是存放数字的数组
@@ -69,13 +72,15 @@
     $$ dp[0][v]=0\ (0{\leq}v{\leq}V)$$
     leetcode中类似题目：
     * [416. Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)
+    * [322. Coin Change](https://leetcode.com/problems/coin-change/)
 * **完全背包**
 	$dp[i][j]$表示前$i$件物品恰好装入容量为$v$的背包中所能获得的最大价值
     $$ dp[i][v] = max\{dp[i-1][v],dp[i][v-w[i]]+c[i]\} $$
     边界
     $$ dp[0][v]=0\ (0{\leq}v{\leq}V)$$
     leetcode中类似题目：
-    * [322. Coin Change](https://leetcode.com/problems/coin-change/)
+    * [518. Coin Change II](https://leetcode-cn.com/problems/coin-change-2/)
+    * [377. Combination Sum IV](https://leetcode-cn.com/problems/combination-sum-iv/)
 
 * **词语分割系列**
     * [139. Word Break](https://leetcode.com/problems/word-break/)

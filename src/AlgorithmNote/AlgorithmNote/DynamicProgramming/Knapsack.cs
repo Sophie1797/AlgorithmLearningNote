@@ -134,6 +134,34 @@ namespace AlgorithmNote
         }
 
         /// <summary>
+        /// 322. Coin Change https://leetcode.com/problems/coin-change/
+        /// 类似01背包问题
+        /// </summary>
+        /// <param name="coins"></param>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+        public int CoinChange(int[] coins, int amount)
+        {
+            var dp = new int[amount + 1];
+            for (var i = 0; i < amount + 1; i++)
+            {
+                dp[i] = int.MaxValue;
+            }
+            dp[0] = 0;//恰好一个面值等于amount的情况要用
+            for (var i = 0; i < coins.Length; i++)
+            {
+                for (var j = coins[i]; j < amount + 1; j++)
+                {
+                    if (dp[j - coins[i]] != int.MaxValue)
+                    {
+                        dp[j] = Math.Min(dp[j], dp[j - coins[i]] + 1);
+                    }
+                }
+            }
+            return dp[amount] == int.MaxValue ? -1 : dp[amount];
+        }
+
+        /// <summary>
         /// 多重背包问题
         /// </summary>
         /// <param name="w"> weights </param>
@@ -217,35 +245,8 @@ namespace AlgorithmNote
         }
 
         /// <summary>
-        /// 322. Coin Change https://leetcode.com/problems/coin-change/
-        /// 类似完全背包问题
-        /// </summary>
-        /// <param name="coins"></param>
-        /// <param name="amount"></param>
-        /// <returns></returns>
-        public int CoinChange(int[] coins, int amount)
-        {
-            var dp = new int[amount + 1];
-            for (var i = 0; i < amount + 1; i++)
-            {
-                dp[i] = int.MaxValue;
-            }
-            dp[0] = 0;//恰好一个面值等于amount的情况要用
-            for (var i = 0; i < coins.Length; i++)
-            {
-                for (var j = coins[i]; j < amount + 1; j++)
-                {
-                    if (dp[j - coins[i]] != int.MaxValue)
-                    {
-                        dp[j] = Math.Min(dp[j], dp[j - coins[i]] + 1);
-                    }
-                }
-            }
-            return dp[amount] == int.MaxValue ? -1 : dp[amount];
-        }
-
-        /// <summary>
         /// 518. Coin Change II https://leetcode-cn.com/problems/coin-change-2/submissions/
+        /// 类似完全背包问题
         /// </summary>
         /// <param name="amount"></param>
         /// <param name="coins"></param>
