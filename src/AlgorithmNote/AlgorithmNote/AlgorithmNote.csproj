@@ -61,6 +61,7 @@
     <Compile Include="Design\LRU.cs" />
     <Compile Include="DynamicProgramming\ClimbingStairs.cs" />
     <Compile Include="DynamicProgramming\DAG.cs" />
+    <Compile Include="DynamicProgramming\GridDP.cs" />
     <Compile Include="DynamicProgramming\LCS.cs" />
     <Compile Include="DynamicProgramming\Knapsack.cs" />
     <Compile Include="DynamicProgramming\LIS.cs" />
