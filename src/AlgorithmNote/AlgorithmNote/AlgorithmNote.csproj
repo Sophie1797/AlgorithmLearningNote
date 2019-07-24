@@ -86,6 +86,7 @@
     <Compile Include="Graph\TopologicalSort\LongestSeqInMatrix.cs" />
     <Compile Include="Graph\UF\UF.cs" />
     <Compile Include="Graph\UF\SetCount.cs" />
+    <Compile Include="HashTable\NumberSum.cs" />
     <Compile Include="Heap\IndexMinHeap.cs" />
     <Compile Include="Heap\IndexMinHeap_List.cs" />
     <Compile Include="Heap\MaxHeap.cs" />
